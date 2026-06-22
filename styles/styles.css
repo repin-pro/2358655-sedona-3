@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* PT Sans Narrow */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*Global*/
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+/*! index !*/
+/* header */
+
+.navigation-item {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.icon--search {
+  background-image: url(../images/icons/search.svg);
+
+}
+
+.icon--favarity {
+  background-image: url(../images/icons/heart.svg);
+}
+
+/* services */
+
+.icon-services {
+  width: 75px;
+  height: 75px;
+  background-repeat: no-repeat;
+}
+
+.icon--home {
+  background-image: url(../images/icons/home.svg);
+}
+
+.icon--food {
+  background-image: url(../images/icons/food.svg);
+}
+
+.icon--present {
+  background-image: url(../images/icons/souvenirs.svg);
+}
+
+/* subscribe */
+.subscribe {
+  height: 414px;
+  width: 100%;
+  background-image: url(../images/background-image-subscription.jpg);
+}
+
+/* footer */
+.footer-social-item {
+  width: 47px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.social--vk {
+  background-image: url(../images/icons/social-vk.svg);
+}
+
+.social--telegram {
+  background-image: url(../images/icons/social-telegram.svg);
+}
+
+.social--youtube {
+  background-image: url(../images/icons/social-youtube.svg);
+}
+
+.logo-html-academy {
+  background-image: url(../images/logo-html-academy.svg);
+  background-repeat: no-repeat;
+}
+
+
+/*! hotels-catalog !*/
+
+/* main */
+.background-hotel {
+  background-image: url(../images/background-hotel.jpg);
+  background-repeat: no-repeat;
+}
+
+.icon--breadcrumps {
+  background-image: url(../images/icons/home-breadcrumps.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+.icon--arrow-right {
+  background-image: url(../images/icons/breadcrumbs-arrow-right.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+/* search-result */
+.sort {
+   background-repeat: no-repeat;
+   width: 16px;
+   height: 14px;
+   padding: 17px 16px;
+}
+.icon--tile-type {
+  background-image: url(../images/icons/table-type.svg);
+}
+.icon--card-type {
+  background-image: url(../images/icons/card-type.svg);
+}
+.icon--table-type {
+  background-image: url(../images/icons/table-type.svg);
+}
+.icon--star {
+  background-image: url(../images/icons/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 16px;
+}
