@@ -71,6 +71,29 @@ body {
   background-image: url(../images/icons/heart.svg);
 }
 
+/* hero */
+.hero-background-image {
+  background: url('../images/divider.svg') center / cover no-repeat,
+    url('../images/index-background.jpg') bottom / cover no-repeat;
+  width: 1200px;
+  height: 485px;
+  position: relative;
+  overflow: hidden;
+   box-sizing: border-box;
+}
+.hero-background-image .welcome-image {
+  position: absolute;       /* Вырываем из потока, чтобы наложить поверх фона */
+  bottom: 0;                /* Прижимаем к низу блока */
+  left: 50%;                /* Сдвигаем на 50% ширины блока */
+  transform: translateX(-50%); /* Возвращаем на половину своей ширины для идеального центрирования */
+
+  width: 300px;             /* ЗАДАЙ ТОЧНУЮ ШИРИНУ (посмотри в Figma, сколько там пикселей) */
+  height: auto;             /* Высота подстроится автоматически, пропорции сохранятся */
+
+  z-index: 10;              /* Гарантируем, что картинка будет выше фона */
+  display: block;           /* Убирает лишние отступы снизу, которые бывают у строчных элементов */
+}
+
 /* services */
 
 .icon-services {
@@ -144,22 +167,27 @@ body {
   width: 20px;
   height: 20px;
 }
+
 /* search-result */
 .sort {
-   background-repeat: no-repeat;
-   width: 16px;
-   height: 14px;
-   padding: 17px 16px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+  padding: 17px 16px;
 }
+
 .icon--tile-type {
   background-image: url(../images/icons/table-type.svg);
 }
+
 .icon--card-type {
   background-image: url(../images/icons/card-type.svg);
 }
+
 .icon--table-type {
   background-image: url(../images/icons/table-type.svg);
 }
+
 .icon--star {
   background-image: url(../images/icons/star.svg);
   background-repeat: no-repeat;
