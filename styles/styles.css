@@ -1,8 +1,9 @@
+/* Fonts */
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,34 +11,20 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
+/* шрифт не грузит */
+.title-4 {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-transform: capitalize;;
+
 }
 
-/* PT Sans Narrow */
-@font-face {
-  font-family: "PT Sans Narrow";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
-  font-display: swap;
-}
 
 /*Global*/
 
@@ -62,18 +49,19 @@ body {
 }
 
 .navigation-item {
-  width: 20px;
-  height: 20px;
   background-repeat: no-repeat;
 }
 
 .icon--search {
   background-image: url(../images/icons/search.svg);
-
+  width: 20px;
+  height: 20px;
 }
 
 .icon--favarity {
   background-image: url(../images/icons/heart.svg);
+  width: 20px;
+  height: 20px;
 }
 
 /* hero */
