@@ -56,6 +56,11 @@ body {
 /*! index !*/
 /* header */
 
+.logo-image {
+  width: 138px;
+  height: 64px;
+}
+
 .navigation-item {
   width: 20px;
   height: 20px;
@@ -73,25 +78,50 @@ body {
 
 /* hero */
 .hero-background-image {
-  background: url('../images/divider.svg') center / cover no-repeat,
-    url('../images/index-background.jpg') bottom / cover no-repeat;
+  background-color: #2F414E;
+  background-image: url('../images/index-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 1200px;
   height: 485px;
   position: relative;
-  overflow: hidden;
-   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.hero-background-image .welcome-image {
-  position: absolute;       /* Вырываем из потока, чтобы наложить поверх фона */
-  bottom: 0;                /* Прижимаем к низу блока */
-  left: 50%;                /* Сдвигаем на 50% ширины блока */
-  transform: translateX(-50%); /* Возвращаем на половину своей ширины для идеального центрирования */
 
-  width: 300px;             /* ЗАДАЙ ТОЧНУЮ ШИРИНУ (посмотри в Figma, сколько там пикселей) */
-  height: auto;             /* Высота подстроится автоматически, пропорции сохранятся */
+.hero-divider {
+  background: url('../images/divider.svg') bottom / cover no-repeat;
+  width: 1200px;
+  height: 57px;
+  position: absolute;
+  bottom: 0;
+}
 
-  z-index: 10;              /* Гарантируем, что картинка будет выше фона */
-  display: block;           /* Убирает лишние отступы снизу, которые бывают у строчных элементов */
+.welcome-image {
+  width: 458px;
+  height: 352px;
+}
+
+/* advantages */
+
+.advantages-images {
+  width: 800px;
+  height: 385px;
+}
+
+.item--basic {
+  background-color: #82B3D3;
+}
+
+.item--second-1 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.item--second-2 {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 /* services */
@@ -116,9 +146,11 @@ body {
 
 /* subscribe */
 .subscribe {
+  width: 1200px;
   height: 414px;
-  width: 100%;
   background-image: url(../images/background-image-subscription.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* footer */
@@ -152,6 +184,9 @@ body {
 .background-hotel {
   background-image: url(../images/background-hotel.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 412px;
 }
 
 .icon--breadcrumps {
@@ -168,6 +203,11 @@ body {
   height: 20px;
 }
 
+/* filter */
+.catalog-filter {
+  display: flex;
+}
+
 /* search-result */
 .sort {
   background-repeat: no-repeat;
@@ -177,7 +217,7 @@ body {
 }
 
 .icon--tile-type {
-  background-image: url(../images/icons/table-type.svg);
+  background-image: url(../images/icons/tile-type.svg);
 }
 
 .icon--card-type {
@@ -191,6 +231,7 @@ body {
 .icon--star {
   background-image: url(../images/icons/star.svg);
   background-repeat: no-repeat;
-  width: 18px;
-  height: 16px;
+  background-size: cover;
+  width: 100px;
+  height: 20px;
 }
