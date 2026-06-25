@@ -151,6 +151,7 @@ body {
   background-image: url(../images/background-image-subscription.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #99A9A9;
 }
 
 /* footer */
@@ -187,6 +188,7 @@ body {
   background-size: cover;
   width: 1200px;
   height: 412px;
+  background-color: #3C4E58;
 }
 
 .icon--breadcrumps {
@@ -228,10 +230,23 @@ body {
   background-image: url(../images/icons/table-type.svg);
 }
 
+.star-wrapper {
+  width: 140px;
+  height: 37px;
+}
+
 .icon--star {
   background-image: url(../images/icons/star.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100px;
-  height: 20px;
+  width: 140px;
+  height: 37px;
+}
+
+.star-3 {
+  width: 65px;
+}
+
+.star-2 {
+  width: 50px;
 }
