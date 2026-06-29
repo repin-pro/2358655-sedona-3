@@ -72,6 +72,12 @@
   line-height: 21px;
 }
 
+.text--checkbox {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
 /*Global*/
 
 .visually-hidden {
@@ -90,11 +96,19 @@ body {
   background-color: #F2F2F2;
 }
 
+.highlight {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
 /* Buttons */
+.button {
+  border: none;
+}
+
 .button--reset {
   background-color: transparent;
   color: #FFFFFF;
-  border: none;
 }
 
 .button--small {
@@ -124,7 +138,6 @@ body {
 .button--basic {
   background-color: #756157;
   color: #FFFFFF;
-  border: none;
 }
 
 .button--second {
@@ -136,7 +149,20 @@ body {
   border-bottom-right-radius: 4px;
   background-color: #82B3D3;
   color: #FFFFFF;
-  border: none;
+}
+
+.button--select {
+  background-color: #7DB54F;
+  color: #FFFFFF;
+}
+
+.button--like-noraml {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 9px 22px;
+  border-radius: 4px;
 }
 
 /*! index !*/
@@ -149,6 +175,7 @@ body {
 
 .navigation-item {
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .icon--search {
@@ -166,25 +193,13 @@ body {
 /* hero */
 .hero-background-image {
   background-color: #2F414E;
-  background-image: url('../images/index-background.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background:
+    url('../images/divider.svg') no-repeat bottom / 100% auto,
+    /* 1. Верхний слой (divider) */
+    url('../images/index-background.jpg') no-repeat center / cover;
+  /* 2. Нижний слой (фон) */
   width: 100%;
   min-height: 485px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-divider {
-  background: url('../images/divider.svg') bottom / cover no-repeat;
-  width: 100%;
-  height: 57px;
-  position: absolute;
-  bottom: 0;
 }
 
 .welcome-image {
@@ -199,10 +214,6 @@ body {
   height: 385px;
 }
 
-.item--basic {
-  background-color: #82B3D3;
-}
-
 .item--second-1 {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -211,9 +222,6 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.title-card--light {
-  color: #FFFFFF;
-}
 
 /* services */
 
@@ -245,11 +253,6 @@ body {
   background-color: #99A9A9;
 }
 
-.section-title,
-.subscribe-description {
-  color: #FFFFFF;
-}
-
 /* footer */
 .footer-social-item {
   width: 47px;
@@ -278,11 +281,6 @@ body {
 /*! hotels-catalog !*/
 
 /* main */
-
-.inner-header-title,
-.breadcrumb-item {
-  color: #FFFFFF;
-}
 
 .background-hotel {
   background-image: url(../images/background-hotel.jpg);
@@ -320,6 +318,10 @@ body {
   padding: 17px 16px;
 }
 
+.card-title {
+  text-transform: none;
+}
+
 .icon--tile-type {
   background-image: url(../images/icons/tile-type.svg);
 }
@@ -351,4 +353,17 @@ body {
 
 .star-2 {
   width: 50px;
+}
+
+.pagination-item {
+  margin-bottom: 20px;
+}
+
+.pagination-link {
+  padding: 24px 12px;
+
+}
+
+.subscribe-catalog {
+  background-color: #FFFFFF;
 }
