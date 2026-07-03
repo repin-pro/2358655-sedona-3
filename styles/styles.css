@@ -333,6 +333,9 @@ body {
 /*! hotels-catalog !*/
 
 /* main */
+.breadcrumb {
+  display: flex;
+}
 
 .background-hotel {
   background-image: url(../images/background-hotel.jpg);
@@ -355,6 +358,10 @@ body {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+}
+
+.price-inputs {
+  display: flex;
 }
 
 /* filter */
