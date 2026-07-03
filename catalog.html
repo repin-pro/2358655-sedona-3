@@ -10,13 +10,12 @@
 
   <body>
 
-    <header class="page-header">
-      <a class="logo-image-link" href="index.html">
-        <img class="logo-image" src="images/logo.svg" alt="Логотип города Седона" width="138px" height="64px">
-      </a>
-
+   <header class="page-header page-container">
       <nav class="navigation">
         <ul class="navigation-list">
+          <a href="index.html">
+            <img class="logo-image" src="images/logo.svg" alt="Логотип города Седона" width="138px" height="64px">
+          </a>
           <li class="navigation-item">
             <a class="navigation-link title-4" href="index.html">Главная</a>
           </li>
@@ -27,19 +26,21 @@
             <a class="navigation-link title-4" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item icon--search">
-            <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
-          </li>
-          <li class="navigation-item icon--favarity">
-            <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
-          </li>
-        </ul>
       </nav>
-      <a class="button button--small button--basic" href="#">Хочу сюда!</a>
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item icon--search">
+          <a href="#" class="navigation-link"><span class="visually-hidden">Поиск</span></a>
+        </li>
+        <li class="navigation-item icon--favarity">
+          <a class="navigation-link" href="#"><span class="visually-hidden">Избранное</span></a>
+        </li>
+        <li>
+          <a class="button button--small button--basic" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
     </header>
 
-    <main class="main">
+    <main class="main page-container">
       <div class="header-wrapper background-hotel highlight">
         <header class="inner-header">
           <h1 class="inner-header-title title-1">Гостиницы Седоны</h1>
@@ -264,7 +265,7 @@
 
     </main>
   </body>
-  <footer class="page-footer">
+  <footer class="page-footer page-container">
     <h2 class="visually-hidden">Контакты</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item social--vk">
