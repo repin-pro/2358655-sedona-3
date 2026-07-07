@@ -127,14 +127,16 @@ fieldset {
   margin: 0;
 }
 
-.main-container {
+main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -148,10 +150,13 @@ body {
   color: #FFFFFF;
 }
 
-.page-container {
+.container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 0 auto;
   background-color: #FFFFFF;
+  min-height: 100vh;
 }
 
 .section-title {
