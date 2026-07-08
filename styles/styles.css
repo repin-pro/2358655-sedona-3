@@ -238,22 +238,29 @@ body {
 
 .page-header {
   display: flex;
+  align-items: center;
+}
+
+.header-wrap {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .navigation {
-  margin-left: 70px;
+
 }
 
 .navigation-user-list {
   margin-right: 70px;
   display: flex;
-  align-items: center;
+
+
 }
 
 .navigation-logo-link {
-  margin-right: 30px;
+  margin-left: 70px;
 }
 
 .navigation-user-item:not(:last-child) {
@@ -268,7 +275,7 @@ body {
 .navigation-item {
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 20px 16px;
+
 }
 
 .icon--search {
@@ -289,10 +296,14 @@ body {
 
 .navigation {
   display: flex;
+  margin-left: 46px;
 }
 
 .navigation-list {
   display: flex;
+  gap: 5px 32px;
+  flex-wrap: wrap;
+  max-width: 600px;
 }
 
 /* hero */
