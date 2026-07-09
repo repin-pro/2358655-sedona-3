@@ -249,8 +249,6 @@ body {
   width: 100%;
 }
 
-.navigation {}
-
 .navigation-user-list {
   margin-right: 70px;
   display: flex;
@@ -338,6 +336,7 @@ body {
 
 .text-block-wrapper {
   padding: 64px 0;
+  text-align: center;
 }
 
 .advantages-desciption-text {
@@ -414,18 +413,21 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
+  padding-bottom: 60p;
 }
 
 .services-item-text {
   text-align: center;
+  max-width: 230px;
 }
 
 .services-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 81px 85px;
+  max-width: 400px;
 }
 
 .icon-services {
@@ -447,15 +449,12 @@ body {
 }
 
 .services-card-title {
+  max-width: 230px;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 
 /* search */
-
-.search-button {
-  margin-bottom: 64px;
-}
 
 .search-description-text {
   margin-bottom: 54px;
@@ -464,7 +463,7 @@ body {
 /* subscribe */
 .subscribe {
   width: 100%;
-  min-height: 414px;
+  padding: 96px 0 104px 0;
   background-image: url(../images/background-image-subscription.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -511,7 +510,9 @@ body {
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 70px;
+  max-width: 142px;
 }
 
 .footer-social-item {
@@ -530,6 +531,14 @@ body {
 
 .social--youtube {
   background-image: url(../images/icons/social-youtube.svg);
+}
+
+.footer-phone-wrap {
+  max-width: 340px;
+}
+
+.footer-contacts-address-phone:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .logo-html-academy {
@@ -627,6 +636,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .sorts {
