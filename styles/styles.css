@@ -75,6 +75,10 @@
   line-height: 23px;
 }
 
+.title-1, .title-2, .title-3, .title-4 {
+  margin: 0;
+}
+
 /*Global*/
 
 html {
@@ -158,7 +162,14 @@ body {
   max-width: 660px;
 }
 
-.footer-social-item, .navigation-item, .navigation-user-item, .breadcrumb-item, .catalog-filter-item, .catalog-filter-item, .sort-list, .pagination-item {
+.footer-social-item,
+.navigation-item,
+.navigation-user-item,
+.breadcrumb-item,
+.catalog-filter-item,
+.catalog-filter-item,
+.sort-list,
+.pagination-item {
   list-style: none;
 }
 
@@ -215,11 +226,12 @@ body {
 }
 
 .button--like-normal {
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 4px 28px;
+  padding: 9px 28px;
   border-radius: 4px;
   background: #F2F2F2;
 }
@@ -248,11 +260,11 @@ body {
 }
 
 .navigation-user-item {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .navigation-user-link {
-padding: 5px;
+  padding: 5px;
 }
 
 .navigation-logo-link {
@@ -310,6 +322,7 @@ padding: 5px;
   z-index: 1;
   margin-top: -13px;
 }
+
 .hero-background-image {
   display: flex;
   flex-direction: column;
@@ -357,7 +370,7 @@ padding: 5px;
 .advantage-card-title {
   margin: 0;
   margin-bottom: 50px;
-  max-width: 178px;
+  max-width: 172px;
   text-transform: uppercase;
 }
 
@@ -405,7 +418,7 @@ padding: 5px;
   align-items: center;
   text-align: center;
   flex-direction: column;
-   background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-more-text-blocks {
@@ -422,11 +435,14 @@ padding: 5px;
 
 .services-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
-  padding-bottom: 60p;
+  justify-content: center;       /* Центрируем ряд карточек */
+  align-items: stretch;
+  gap: 20px 170px;                     /* Уменьшили gap: 100px слишком много для адаптива */
+  padding: 0 85px;               /* Адаптивные отступы по бокам */
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 .services-item-text {
@@ -491,6 +507,8 @@ padding: 5px;
 
 .subscribe-description {
   margin-bottom: 54px;
+  max-width: 475px;
+  text-align: center;
 }
 
 .subscribe-form {
@@ -654,6 +672,12 @@ padding: 5px;
   display: flex;
 }
 
+.sort-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
 .sort-list {
   background-repeat: no-repeat;
   width: 16px;
@@ -675,6 +699,10 @@ padding: 5px;
   border: 1px solid #E5E5E5;
 }
 
+.card-link {
+  margin-bottom: 16px;
+}
+
 .card-title {
   margin-bottom: 18px;
 }
@@ -687,7 +715,7 @@ padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  gap: 16px 20px;
 }
 
 .card-description {
@@ -732,6 +760,7 @@ padding: 5px;
 .pagination {
   padding-top: 80px;
   display: flex;
+  gap: 8px;
 }
 
 .pagination-item:first-of-type {
@@ -739,12 +768,8 @@ padding: 5px;
   border-radius: 4px;
 }
 
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
-}
-
 .pagination-link {
-  padding: 5px 15px;
+  padding: 9px 22px;
 
 }
 
