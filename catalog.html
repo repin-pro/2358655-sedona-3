@@ -141,24 +141,28 @@
         <section class="search-result">
           <div class="search-result-wrap">
             <h2 class="results-count title-2">Найдено гостиниц: 38</h2>
-            <select class="select-control1 text-blocks" aria-label="Сортировка">
-              <option class="search-form-option" value="cheap" selected>Сначала дешевые</option>
-              <option class="search-form-option" value="expensive">Сначала дорогие</option>
-            </select>
-            <ul class="sorts">
-              <li class="sort-list sort-active icon--tile-type">
-                <a class="sort-link" href="catalog.html?view=tile"><span class="visually-hidden">Показать карточки</span></a>
-              </li>
-              <li class="sort-list icon--card-type">
-                <a class="sort-link" href="catalog.html?view=card">
-                  <span class="visually-hidden">Показать карточки с описанием</span></a>
-              </li>
-              <li class="sort-list icon--table-type">
-                <a class="sort-link" href="catalog.html?view=list">
-                  <span class="visually-hidden">Показать список</span>
-                </a>
-              </li>
-            </ul>
+            <div class="sort-wrapper">
+              <select class="select-control1 text-blocks" aria-label="Сортировка">
+                <option class="search-form-option" value="cheap" selected>Сначала дешевые</option>
+                <option class="search-form-option" value="expensive">Сначала дорогие</option>
+              </select>
+              <ul class="sorts">
+                <li class="sort-list sort-active icon--tile-type">
+                  <a class="sort-link" href="catalog.html?view=tile"><span class="visually-hidden">Показать
+                      карточки</span></a>
+                </li>
+                <li class="sort-list icon--card-type">
+                  <a class="sort-link" href="catalog.html?view=card">
+                    <span class="visually-hidden">Показать карточки с описанием</span></a>
+                </li>
+                <li class="sort-list icon--table-type">
+                  <a class="sort-link" href="catalog.html?view=list">
+                    <span class="visually-hidden">Показать список</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
 
 
@@ -308,23 +312,26 @@
     <h2 class="visually-hidden">Контакты</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item social--vk">
-        <a class="social-icon-link" href="#">
+        <a class="social-icon-link" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="footer-social-item social--telegram">
-        <a class="social-icon-link" href="#">
+        <a class="social-icon-link" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="footer-social-item social--youtube">
-        <a class="social-icon-link" href="#">
+        <a class="social-icon-link" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
-    <a class="footer-contacts-address-phone text--phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <a href="https://htmlacademy.ru" class="logo-html-academy">
+    <div class="footer-phone-wrap">
+      <a class="footer-contacts-address-phone text--phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    </div>
+
+    <a class="logo-html-academy" href="https://htmlacademy.ru">
       <span class="visually-hidden">Логотип разработчика HTML Academy</span></a>
   </footer>
   </div>
