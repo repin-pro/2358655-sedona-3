@@ -177,6 +177,7 @@ body {
 .button {
   border: none;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .button--reset {
@@ -336,7 +337,11 @@ body {
   /* 2. Нижний слой (фон) */
   width: 100%;
   min-height: 480px;
-  padding: 20px 0;
+  padding: 30px 0;
+}
+
+.welcome-image:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .welcome-image {
@@ -563,7 +568,9 @@ body {
 }
 
 .footer-phone-wrap {
-  max-width: 340px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-contacts-address-phone:not(:last-child) {
@@ -761,6 +768,7 @@ body {
   padding-top: 80px;
   display: flex;
   gap: 8px;
+  box-sizing: border-box;
 }
 
 .pagination-item:first-of-type {
