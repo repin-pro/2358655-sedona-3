@@ -117,7 +117,7 @@ fieldset {
   margin: 0;
 }
 
-main {
+.main-index {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -126,7 +126,6 @@ main {
 body {
   display: flex;
   flex-direction: column;
-
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -148,7 +147,6 @@ body {
   background-color: #FFFFFF;
   min-height: 100vh;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .section-title {
@@ -164,6 +162,7 @@ body {
   max-width: 660px;
 }
 
+/* Отключение маркеров у списков */
 .footer-social-item,
 .navigation-item,
 .navigation-user-item,
@@ -239,8 +238,8 @@ body {
   background: #F2F2F2;
 }
 
-/*! index !*/
-/* header */
+/* Страница index.html */
+/* Секция header */
 
 .page-header {
   display: flex;
@@ -304,7 +303,6 @@ body {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
-
 }
 
 .navigation {
@@ -319,7 +317,7 @@ body {
   max-width: 600px;
 }
 
-/* hero */
+/* Секция hero */
 .hero {
   position: relative;
   z-index: 1;
@@ -334,9 +332,7 @@ body {
   background-color: #2F414E;
   background:
     url('../images/divider.svg') no-repeat bottom / 100% auto,
-    /* 1. Верхний слой (divider) */
     url('../images/index-background.jpg') no-repeat center / cover;
-  /* 2. Нижний слой (фон) */
   width: 100%;
   min-height: 480px;
   padding: 30px 0;
@@ -352,7 +348,7 @@ body {
   object-fit: cover;
 }
 
-/* advantages */
+/* Секция advantages */
 .advantages {
   display: flex;
   flex-direction: column;
@@ -432,7 +428,7 @@ body {
   max-width: 230px;
 }
 
-/* services */
+/* Секция ervices */
 
 .services {
   display: flex;
@@ -443,12 +439,7 @@ body {
 .services-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;       /* Центрируем ряд карточек */
-  align-items: stretch;
-  gap: 20px 170px;                     /* Уменьшили gap: 100px слишком много для адаптива */
-  padding: 0 85px;               /* Адаптивные отступы по бокам */
   margin: 0;
-  list-style: none;
   box-sizing: border-box;
 }
 
@@ -461,7 +452,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
+  justify-content: center;
+  width: 400px;
+  min-height: 385px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-item:nth-child(2n) {
+  background-color: #ffffff;
 }
 
 .icon-services {
@@ -488,13 +486,13 @@ body {
   text-transform: uppercase;
 }
 
-/* search */
+/* Секция search */
 
 .search-description-text {
   margin-bottom: 54px;
 }
 
-/* subscribe */
+/* Секция subscribe */
 .subscribe {
   width: 100%;
   padding: 96px 0 104px 0;
@@ -536,7 +534,7 @@ body {
   border-bottom-left-radius: 0;
 }
 
-/* footer */
+/* Секция footer */
 .page-footer {
   display: flex;
   justify-content: space-between;
@@ -587,9 +585,9 @@ body {
   margin-right: 70px;
 }
 
-/*! hotels-catalog !*/
+/* Страница catalog.html*/
 
-/* main */
+/* секция hero */
 
 .inner-header {
   display: flex;
@@ -633,7 +631,7 @@ body {
   display: flex;
 }
 
-/* filter */
+/* Секция filter */
 .catalog-filter {
   display: flex;
   padding: 35px 70px;
@@ -654,9 +652,7 @@ body {
   min-width: 550px;
 }
 
-
-
-/* search-result */
+/* Секция search-result */
 .search-result {
   padding-left: 50px;
   padding-right: 50px;
@@ -674,7 +670,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .sorts {
@@ -788,7 +783,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 66px 328px;
-
 }
 
 .card {
