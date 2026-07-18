@@ -80,9 +80,25 @@
 }
 
 /*Global*/
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #F2F2F2;
+}
 
 html {
   height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -97,21 +113,20 @@ html {
   border: 0;
 }
 
-a {
+/* убираем подчеркивание в линках и наследуем цвет блока */
+.navigation-link, .button, .footer-contacts-address-phone, .breadcrumb-link   {
   color: inherit;
   text-decoration: none;
 }
 
-ul {
+/* Сбрамываем внутриние и внешние отступы спискам */
+.advantages-list, .advantage-more, .services-list, .listings-grid, .sorts {
   padding: 0;
   margin: 0;
 }
 
-li {
-  padding: 0;
-}
-
-fieldset {
+/* Убираем обводку вокруг формы (fieldset) */
+.catalog-filter-group, .filter-group {
   border: none;
   padding: 0;
   margin: 0;
@@ -121,17 +136,6 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
-  background-color: #F2F2F2;
 }
 
 .highlight {
@@ -179,6 +183,7 @@ body {
   border: none;
   font-family: inherit;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .button--reset {
@@ -191,6 +196,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  padding: 8px 23px;
 }
 
 .button--big {
@@ -206,15 +212,12 @@ body {
 }
 
 .button--basic {
-  padding: 4px 20px;
   background-color: #756157;
   color: #FFFFFF;
   border-radius: 4px;
-
 }
 
 .button--second {
-  padding: 4px 26px;
   border-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -233,7 +236,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 9px 28px;
+  padding: 8px 25px;
   border-radius: 4px;
   background: #F2F2F2;
 }
@@ -390,7 +393,6 @@ body {
 .advantages-images {
   width: 800px;
   min-height: 385px;
-  object-fit: cover;
 }
 
 .advantage-more-list:nth-child(2n) {
@@ -672,6 +674,10 @@ body {
   align-items: center;
 }
 
+.select-control1 {
+  padding: 14px 100px 14px 20px;
+}
+
 .sorts {
   display: flex;
 }
@@ -687,6 +693,7 @@ body {
   width: 16px;
   height: 14px;
   padding: 17px 16px;
+  cursor: pointer;
 }
 
 .listings-grid {
