@@ -75,7 +75,10 @@
   line-height: 23px;
 }
 
-.title-1, .title-2, .title-3, .title-4 {
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
   margin: 0;
 }
 
@@ -114,19 +117,28 @@ img {
 }
 
 /* убираем подчеркивание в линках и наследуем цвет блока */
-.navigation-link, .button, .footer-contacts-address-phone, .breadcrumb-link   {
+.navigation-link,
+.button,
+.footer-contacts-address-phone,
+.breadcrumb-link,
+.card-title-link {
   color: inherit;
   text-decoration: none;
 }
 
-/* Сбрамываем внутриние и внешние отступы спискам */
-.advantages-list, .advantage-more, .services-list, .listings-grid, .sorts {
+/* Сбраcываем внутриние и внешние отступы спискам */
+.advantages-list,
+.advantage-more,
+.services-list,
+.listings-grid,
+.sorts {
   padding: 0;
   margin: 0;
 }
 
 /* Убираем обводку вокруг формы (fieldset) */
-.catalog-filter-group, .filter-group {
+.catalog-filter-group,
+.filter-group {
   border: none;
   padding: 0;
   margin: 0;
@@ -174,7 +186,7 @@ img {
 .catalog-filter-item,
 .catalog-filter-item,
 .sort-list,
-.pagination-item {
+.pagination-item, .listings-grid {
   list-style: none;
 }
 
@@ -184,6 +196,7 @@ img {
   font-family: inherit;
   box-sizing: border-box;
   cursor: pointer;
+  text-align: center;
 }
 
 .button--reset {
@@ -697,42 +710,39 @@ img {
 }
 
 .listings-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  /* Адаптивные колонки: минимум 300px, остальное делится поровну */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  /* Три строки: контент сверху, пустота посередине, кнопки снизу */
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+  padding: 20px;
   border: 1px solid #E5E5E5;
+  height: 100%; /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
+  box-sizing: border-box;
 }
 
-.card-link {
-  margin-bottom: 16px;
-}
-
-.card-title {
-  margin-bottom: 18px;
-}
-
-.card-wrapper {
-  padding: 0 20px 20px 20px;
-}
-
-.card-button-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 16px 20px;
+.card-link,
+.card-title-link,
+.card-description,
+.card-button,
+.card-rating,
+.star-wrapper {
+  grid-column: 1 / -1;
 }
 
 .card-description {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+
 }
 
 .icon--tile-type {
@@ -790,15 +800,6 @@ img {
   flex-direction: column;
   align-items: center;
   padding: 66px 328px;
-}
-
-.card {
-  max-width: 340px;
-}
-
-.card:not(:last-child) {
-  margin-right: 10px;
-  margin-bottom: 20px;
 }
 
 .subscribe-catalog--form-row {
