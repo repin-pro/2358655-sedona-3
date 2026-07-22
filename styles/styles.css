@@ -132,7 +132,8 @@ img {
 .advantage-more,
 .services-list,
 .listings-grid,
-.sorts {
+.sorts,
+.footer-social-list, .catalog-filter-list, .breadcrumb {
   padding: 0;
   margin: 0;
 }
@@ -185,9 +186,10 @@ img {
 .navigation-user-item,
 .breadcrumb-item,
 .catalog-filter-item,
-.catalog-filter-item,
 .sort-list,
-.pagination-item, .listings-grid {
+.pagination-item,
+.listings-grid,
+.catalog-filter-list {
   list-style: none;
 }
 
@@ -250,9 +252,11 @@ img {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 8px 25px;
   border-radius: 4px;
   background: #F2F2F2;
+  align-self: center;
+  justify-self: center;
+
 }
 
 /* Страница index.html */
@@ -644,28 +648,37 @@ img {
 }
 
 .price-inputs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 143px 143px;
+  grid-template-rows: 48px;
+  gap: 8px;
+}
+
+.filter-form-input {
+
+  width: 100%;
 }
 
 /* Секция filter */
 .catalog-filter {
-  display: flex;
+  display: grid;
   padding: 35px 70px;
-  justify-content: space-between;
+  grid-template-columns: 150px 150px 288px 191px;
+  gap: 70px;
 }
 
-.catalog-filter-group:not(:last-child) {
-  margin-right: 70px;
+.catalog-filter-title {
+  margin-bottom: 32px;
 }
 
-.filter-group-left {
-  display: flex;
-  min-width: 370px;
+.catalog-filter-list {
+  padding: 0;
+  display: grid;
+  gap: 16px;
 }
 
-.filter-group-right {
-  display: flex;
-  min-width: 550px;
+.filter-actions {
+  padding-top: 55px;
 }
 
 /* Секция search-result */
@@ -721,17 +734,17 @@ img {
 .card {
   display: grid;
   grid-template-rows: auto 1fr 1fr 1fr 1fr;
-  grid-template-columns:1fr 1fr ;
-  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   padding: 20px;
   border: 1px solid #E5E5E5;
-  height: 100%; /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
+  height: 100%;
+  /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
 }
 
 .card-link,
-.card-title-link,
-.card-description {
+.card-title-link {
   grid-column: 1 / -1;
 }
 
@@ -746,9 +759,19 @@ img {
 .card-description {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
+  display: block;
+}
 
+.card-description:nth-child(3) {
+  grid-column: 1;
+  /* левый (это первый .card-description) */
+  text-align: left;
+}
+
+.card-description:nth-child(4) {
+  grid-column: 2;
+  /* правый (второй .card-description) */
+  text-align: right;
 }
 
 .icon--tile-type {
