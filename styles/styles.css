@@ -102,6 +102,7 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -719,9 +720,9 @@ img {
 
 .card {
   display: grid;
-  /* Три строки: контент сверху, пустота посередине, кнопки снизу */
-  grid-template-rows: auto 1fr auto;
-  gap: 16px;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr ;
+  gap: 12px;
   padding: 20px;
   border: 1px solid #E5E5E5;
   height: 100%; /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
@@ -730,11 +731,16 @@ img {
 
 .card-link,
 .card-title-link,
-.card-description,
-.card-button,
-.card-rating,
-.star-wrapper {
+.card-description {
   grid-column: 1 / -1;
+}
+
+.card-link {
+  width: 100%;
+}
+
+.card-rating {
+  width: 100%;
 }
 
 .card-description {
