@@ -133,7 +133,10 @@ img {
 .services-list,
 .listings-grid,
 .sorts,
-.footer-social-list, .catalog-filter-list, .breadcrumb {
+.footer-social-list,
+.catalog-filter-list,
+.breadcrumb,
+.pagination {
   padding: 0;
   margin: 0;
 }
@@ -809,9 +812,26 @@ img {
 
 .pagination {
   padding-top: 80px;
-  display: flex;
-  gap: 8px;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  /* Разрешает перенос на новую строку, если не влезают */
+  gap: 8px;
+  /* Отступы между кнопками */
+}
+
+.pagination-item {
+  display: block;        /* Сбрасываем любые лишние стили у li */
+  flex: 0 0 auto;        /* Ключевое правило: не расти, не сжиматься, ширина по контенту */
+}
+
+.pagination-link {
+  padding: 0;
+  margin: 0;
+  display: block;        /* Ссылка занимает всю область li */
+  min-width: 40px;       /* Минимальная ширина для удобства нажатия (UX) */
+  text-align: center;    /* Центрируем цифру внутри кнопки */
+  padding: 10px;
 }
 
 .pagination-item:first-of-type {
@@ -819,9 +839,8 @@ img {
   border-radius: 4px;
 }
 
-.pagination-link {
-  padding: 9px 22px;
-
+.pagination-current {
+  background: #F2F2F2;
 }
 
 .subscribe-catalog {
