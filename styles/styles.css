@@ -672,11 +672,10 @@ img {
   gap: 8px;
 }
 
-/* Отключаем стрелки в инпутах */
-.filter-form-input::-webkit-inner-spin-button,
-.filter-form-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* отключаем стрелки в инпутах*/
+.filter-form-input {
+  -moz-appearance: textfield;
+  appearance: textfield; /* для совместимости с другими браузерами */
 }
 
 .filter-form-input {
@@ -754,6 +753,7 @@ img {
   padding: 14px 100px 14px 20px;
   border: 2px solid #E5E5E5;
   max-height: 50px;
+  background-color: #ffffff;
 }
 
 .sorts {
@@ -789,6 +789,7 @@ img {
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
+
 }
 
 .card-image {
@@ -806,6 +807,7 @@ img {
 
 .card-rating {
   width: 100%;
+  height: 100%;
 }
 
 .card-description {
