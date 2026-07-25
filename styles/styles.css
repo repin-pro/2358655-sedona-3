@@ -623,6 +623,12 @@ img {
 
 /* секция hero */
 
+.header-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -13px;
+}
+
 .inner-header {
   display: flex;
   flex-direction: column;
