@@ -39,40 +39,47 @@
   line-height: 24px;
 }
 
-.text--basic {
+.text-basic {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
 }
 
-.text--second {
+.text-second {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
 }
 
 .text-blocks {
+  font-family: PT Sans;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
 
-.text--phone {
+.text-phone {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
 }
 
-.text--small {
+.text-small {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
 }
 
-.text--checkbox {
+.text-checkbox {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+
+.text-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .title-1,
@@ -129,14 +136,15 @@ img {
 
 /* Сбраcываем внутриние и внешние отступы спискам */
 .advantages-list,
-.advantage-more,
 .services-list,
 .listings-grid,
 .sorts,
 .footer-social-list,
 .catalog-filter-list,
 .breadcrumb,
-.pagination {
+.pagination,
+.navigation-list,
+.navigation-user-list {
   padding: 0;
   margin: 0;
 }
@@ -198,6 +206,8 @@ img {
 
 /* Buttons */
 .button {
+  margin: 0;
+  padding: 0;
   border: none;
   font-family: inherit;
   box-sizing: border-box;
@@ -205,20 +215,21 @@ img {
   text-align: center;
 }
 
-.button--reset {
+.button-reset {
   background-color: transparent;
   color: #FFFFFF;
 }
 
-.button--small {
+.button-small {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   padding: 8px 23px;
+  max-height: 36px;
 }
 
-.button--big {
+.button-big {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -230,13 +241,13 @@ img {
   border-radius: 4px;
 }
 
-.button--basic {
+.button-basic {
   background-color: #756157;
   color: #FFFFFF;
   border-radius: 4px;
 }
 
-.button--second {
+.button-second {
   border-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -244,12 +255,12 @@ img {
   color: #FFFFFF;
 }
 
-.button--select {
+.button-select {
   background-color: #7DB54F;
   color: #FFFFFF;
 }
 
-.button--like-normal {
+.button-like-normal {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
@@ -259,30 +270,25 @@ img {
   background: #F2F2F2;
   align-self: center;
   justify-self: center;
-
 }
 
 /* Страница index.html */
 /* Секция header */
 
 .page-header {
-  display: flex;
+  display: grid;
   align-items: center;
-}
-
-.header-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 13px;
+  gap: 30px;
+  margin: 0 70px;
+  grid-template-columns: 138px 600px 80px 160px;
 }
 
 .navigation-user-list {
-  margin-right: 70px;
   display: flex;
-  gap: 20px;
-  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
 }
 
 .navigation-user-item {
@@ -294,7 +300,6 @@ img {
 }
 
 .navigation-logo-link {
-  margin-left: 70px;
   position: relative;
   z-index: 10;
 }
@@ -307,22 +312,20 @@ img {
 .navigation-item {
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 
 .navigation-link {
   padding: 20px 0;
 }
 
-.icon--search {
+.icon-search {
   background-image: url(../images/icons/search.svg);
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
-
 }
 
-.icon--favarity {
+.icon-favarity {
   background-image: url(../images/icons/heart.svg);
   background-repeat: no-repeat;
   width: 20px;
@@ -331,14 +334,13 @@ img {
 
 .navigation {
   display: flex;
-  margin-left: 46px;
 }
 
 .navigation-list {
   display: flex;
+  flex-direction: row;
   gap: 5px 32px;
   flex-wrap: wrap;
-  max-width: 600px;
 }
 
 /* Секция hero */
@@ -346,6 +348,10 @@ img {
   position: relative;
   z-index: 1;
   margin-top: -13px;
+}
+
+.hero-menu-center {
+  margin-bottom: 13px;
 }
 
 .hero-background-image {
@@ -390,8 +396,9 @@ img {
 }
 
 .advantages-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 400px 400px 400px ;
+  grid-template-rows: 385px 385px 385px;
 }
 
 .advantage-card-title {
@@ -401,14 +408,16 @@ img {
   text-transform: uppercase;
 }
 
+.advantages-images {
+   grid-column: span 2;
+}
+
 .card-block-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 90px 85px;
-  max-height: 385px;
 }
 
 .advantages-images {
@@ -420,20 +429,8 @@ img {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantage-more {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
 .advantages-item {
   display: flex;
-  flex-direction: row;
-}
-
-:last-child.advantages-item {
-  flex-direction: row-reverse;
 }
 
 .advantage-more-list {
@@ -491,15 +488,15 @@ img {
   background-repeat: no-repeat;
 }
 
-.icon--home {
+.icon-home {
   background-image: url(../images/icons/home.svg);
 }
 
-.icon--food {
+.icon-food {
   background-image: url(../images/icons/food.svg);
 }
 
-.icon--present {
+.icon-present {
   background-image: url(../images/icons/souvenirs.svg);
 }
 
@@ -557,10 +554,17 @@ img {
   border-bottom-left-radius: 0;
 }
 
+.subscribe-catalog-form-row {
+  display: flex;
+  max-width: 684px;
+}
+
 /* Секция footer */
 .page-footer {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 70px;
+  display: grid;
+  grid-template-columns: 142px 340px 115px;
+  gap: 236px;
   padding-bottom: 30px;
   padding-top: 40px;
 }
@@ -568,8 +572,7 @@ img {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 70px;
-  max-width: 142px;
+  align-content: center;
 }
 
 .footer-social-item {
@@ -578,22 +581,16 @@ img {
   background-repeat: no-repeat;
 }
 
-.social--vk {
+.social-vk {
   background-image: url(../images/icons/social-vk.svg);
 }
 
-.social--telegram {
+.social-telegram {
   background-image: url(../images/icons/social-telegram.svg);
 }
 
-.social--youtube {
+.social-youtube {
   background-image: url(../images/icons/social-youtube.svg);
-}
-
-.footer-phone-wrap {
-  width: 340px;
-  display: flex;
-  flex-direction: column;
 }
 
 .footer-contacts-address-phone:not(:last-child) {
@@ -605,7 +602,21 @@ img {
   background-repeat: no-repeat;
   width: 114px;
   height: 33px;
-  margin-right: 70px;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+}
+
+.footer-phone-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
 }
 
 /* Страница catalog.html*/
@@ -636,14 +647,14 @@ img {
   background-color: #3C4E58;
 }
 
-.icon--breadcrumps {
+.icon-breadcrumps {
   background-image: url(../images/icons/home-breadcrumps.svg);
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
 }
 
-.icon--arrow-right {
+.icon-arrow-right {
   background-image: url(../images/icons/breadcrumbs-arrow-right.svg);
   background-repeat: no-repeat;
   width: 20px;
@@ -651,15 +662,27 @@ img {
 }
 
 .price-inputs {
-  display: grid;
-  grid-template-columns: 143px 143px;
-  grid-template-rows: 48px;
+  display: flex;
   gap: 8px;
 }
 
-.filter-form-input {
+/* Отключаем стрелки в инпутах */
+.filter-form-input::-webkit-inner-spin-button,
+.filter-form-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  width: 100%;
+.filter-form-input {
+  flex: 1 1 auto;
+  /* позволяет и сжиматься, и расти */
+  height: 48px;
+  width: 100px;
+  /* можно оставить как базовое значение */
+  padding-right: 20px;
+  padding-left: 20px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 /* Секция filter */
@@ -681,7 +704,23 @@ img {
 }
 
 .filter-actions {
-  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-filter {
+  padding-left: 70px;
+}
+
+.button-form-apply {
+  margin-bottom: 32px;
+}
+
+.price-form-wrapper {
+  display: grid;
+  grid-template-columns: 288px 191px;
+  gap: 70px;
+  width: 100%;
 }
 
 /* Секция search-result */
@@ -693,8 +732,9 @@ img {
 }
 
 .search-result-wrap {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 70px;
+  grid-template-columns: 500px 292px 160px;
   margin-bottom: 40px;
 }
 
@@ -706,16 +746,15 @@ img {
 
 .select-control1 {
   padding: 14px 100px 14px 20px;
+  border: 2px solid #E5E5E5;
+  max-height: 50px;
 }
 
 .sorts {
   display: flex;
-}
-
-.sort-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .sort-list {
@@ -744,6 +783,10 @@ img {
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
+}
+
+.card-image {
+  width: 100%;
 }
 
 .card-link,
@@ -777,15 +820,15 @@ img {
   text-align: right;
 }
 
-.icon--tile-type {
+.icon-tile-type {
   background-image: url(../images/icons/tile-type.svg);
 }
 
-.icon--card-type {
+.icon-card-type {
   background-image: url(../images/icons/card-type.svg);
 }
 
-.icon--table-type {
+.icon-table-type {
   background-image: url(../images/icons/table-type.svg);
 }
 
@@ -794,7 +837,7 @@ img {
   height: 37px;
 }
 
-.icon--star {
+.icon-star {
   background-image: url(../images/icons/star.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -821,16 +864,21 @@ img {
 }
 
 .pagination-item {
-  display: block;        /* Сбрасываем любые лишние стили у li */
-  flex: 0 0 auto;        /* Ключевое правило: не расти, не сжиматься, ширина по контенту */
+  display: block;
+  /* Сбрасываем любые лишние стили у li */
+  flex: 0 0 auto;
+  /* Ключевое правило: не расти, не сжиматься, ширина по контенту */
 }
 
 .pagination-link {
   padding: 0;
   margin: 0;
-  display: block;        /* Ссылка занимает всю область li */
-  min-width: 40px;       /* Минимальная ширина для удобства нажатия (UX) */
-  text-align: center;    /* Центрируем цифру внутри кнопки */
+  display: block;
+  /* Ссылка занимает всю область li */
+  min-width: 40px;
+  /* Минимальная ширина для удобства нажатия (UX) */
+  text-align: center;
+  /* Центрируем цифру внутри кнопки */
   padding: 10px;
 }
 
@@ -850,7 +898,7 @@ img {
   padding: 66px 328px;
 }
 
-.subscribe-catalog--form-row {
+.subscribe-catalogform-row {
   display: flex;
   flex-direction: row;
 }
@@ -860,10 +908,11 @@ img {
 }
 
 .newsletter-input {
+  box-sizing: border-box;
   background: #F2F2F2;
   padding: 14px 345px 14px 20px;
   border: none;
-  width: 452;
+  width: 452px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
