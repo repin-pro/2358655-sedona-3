@@ -1,4 +1,5 @@
 /* Fonts */
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -226,7 +227,6 @@ img {
   line-height: 20px;
   text-transform: uppercase;
   padding: 8px 23px;
-  max-height: 36px;
 }
 
 .button-big {
@@ -277,18 +277,27 @@ img {
 
 .page-header {
   display: grid;
-  align-items: center;
+  align-items: start;
   gap: 30px;
   margin: 0 70px;
-  grid-template-columns: 138px 600px 80px 160px;
+  grid-template-columns: 138px 561px 110px 160px;
+  padding: 0;
+  /* Убираем внутренние паддинги у родителя, чтобы не было дублей */
+  box-sizing: border-box;
+}
+
+.header-button {
+  display: flex;
+  flex-direction: column;
+   padding: 20px 0 20px 0;
 }
 
 .navigation-user-list {
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 24px;
+  padding: 26px 0 20px 0;
 }
 
 .navigation-user-item {
@@ -305,6 +314,7 @@ img {
 }
 
 .logo-image {
+  display: block;
   width: 138px;
   height: 64px;
 }
@@ -312,10 +322,6 @@ img {
 .navigation-item {
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.navigation-link {
-  padding: 20px 0;
 }
 
 .icon-search {
@@ -333,7 +339,7 @@ img {
 }
 
 .navigation {
-  display: flex;
+  padding: 19px 0 27px 0;
 }
 
 .navigation-list {
@@ -348,10 +354,6 @@ img {
   position: relative;
   z-index: 1;
   margin-top: -13px;
-}
-
-.hero-menu-center {
-  margin-bottom: 13px;
 }
 
 .hero-background-image {
@@ -397,7 +399,7 @@ img {
 
 .advantages-list {
   display: grid;
-  grid-template-columns: 400px 400px 400px ;
+  grid-template-columns: 400px 400px 400px;
   grid-template-rows: 385px 385px 385px;
 }
 
@@ -409,7 +411,7 @@ img {
 }
 
 .advantages-images {
-   grid-column: span 2;
+  grid-column: span 2;
 }
 
 .card-block-wrap {
@@ -675,7 +677,8 @@ img {
 /* отключаем стрелки в инпутах*/
 .filter-form-input {
   -moz-appearance: textfield;
-  appearance: textfield; /* для совместимости с другими браузерами */
+  appearance: textfield;
+  /* для совместимости с другими браузерами */
 }
 
 .filter-form-input {
