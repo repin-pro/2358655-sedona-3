@@ -183,7 +183,7 @@ img {
   margin: 0;
   max-width: 620px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   text-transform: uppercase;
 }
 
@@ -282,16 +282,20 @@ img {
   grid-template-columns: 138px 561px 110px 160px;
   /* Убираем внутренние паддинги у родителя, чтобы не было дублей */
   box-sizing: border-box;
-  align-items: center;
-  padding-bottom: 24px;
+  align-items: start;
+  padding-bottom: 30px;
 }
+
 .navigation {
+  padding-top: 18px;
+  padding-left: 15px;
   padding-bottom: 10px;
 }
 
 .header-button {
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
@@ -300,6 +304,7 @@ img {
   justify-content: end;
   flex-wrap: wrap;
   gap: 24px;
+  padding-top: 21px;
   padding-bottom: 10px;
 }
 
@@ -314,7 +319,6 @@ img {
 .navigation-logo-link {
   position: relative;
   z-index: 10;
-  align-self: start;
 }
 
 .logo-image {
@@ -333,6 +337,51 @@ img {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+
+}
+
+/* Контейнер пункта меню с сердцем должен быть относительным */
+.navigation-user-item.icon-favarity {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  /* Убираем background-image отсюда, если он мешает,
+     но лучше оставить здесь, а бейдж наложить сверху */
+}
+
+/* Стили для бейджа */
+ .badge {
+  position: absolute;
+  /* Позиционируем относительно родителя (icon-favarity) */
+  top: -11px;      /* Смещение вверх, чтобы залезть на угол иконки */
+  right: -7px;    /* Смещение вправо */
+
+  /* Остальные стили бейджа оставляем как были */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+
+  /* Гарантируем, что бейдж будет поверх иконки сердца */
+  z-index: 2;
+
+  /* Опционально: тень для объема */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Убедимся, что ссылка не ломает верстку */
+.navigation-user-item.icon-favarity a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .icon-favarity {
@@ -340,6 +389,7 @@ img {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+
 }
 
 .navigation-list {
@@ -366,8 +416,8 @@ img {
     url('../images/divider.svg') no-repeat bottom / 100% auto,
     url('../images/index-background.jpg') no-repeat center / cover;
   width: 100%;
-  min-height: 480px;
-  padding: 30px 0;
+
+  padding: 50px 0;
 }
 
 .welcome-image:not(:last-child) {
@@ -389,8 +439,11 @@ img {
 }
 
 .text-block-wrapper {
-  padding: 64px 0;
-  text-align: center;
+  padding: 103px 0 68px 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 .advantages-desciption-text {
@@ -400,12 +453,11 @@ img {
 .advantages-list {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 385px 385px 385px;
 }
 
 .advantage-card-title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   max-width: 172px;
   text-transform: uppercase;
 }
@@ -419,7 +471,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 85px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .advantages-images {
