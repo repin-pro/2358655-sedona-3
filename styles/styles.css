@@ -455,17 +455,6 @@ img {
   grid-template-columns: 400px 400px 400px;
 }
 
-.advantage-card-title {
-  margin: 0;
-  margin-bottom: 20px;
-  max-width: 172px;
-  text-transform: uppercase;
-}
-
-.advantages-images {
-  grid-column: span 2;
-}
-
 .card-block-wrap {
   display: flex;
   flex-direction: column;
@@ -476,6 +465,30 @@ img {
   padding-left: 80px;
   padding-right: 80px;
 }
+
+.advantage-card-title {
+  margin: 0;
+  max-width: 172px;
+  text-transform: uppercase;
+
+}
+
+.advantage-card-title::after {
+  content: '';
+  display: block;
+  width: 60px;          /* Длина полоски — подберите под макет */
+  height: 3px;          /* Толщина полоски */
+  background-color: #ffffff; /* Цвет полоски (на синем фоне лучше белый) */
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+
+.advantages-images {
+  grid-column: span 2;
+}
+
+
 
 .advantages-images {
   width: 800px;
@@ -488,6 +501,7 @@ img {
 
 .advantages-item {
   display: flex;
+
 }
 
 .advantage-more-list {
@@ -504,6 +518,14 @@ img {
 .advantage-more-text-blocks {
   max-width: 230px;
 }
+
+
+
+.advatages-text {
+  padding: 0;
+  margin: 0;
+}
+
 
 /* Секция ervices */
 
@@ -562,6 +584,8 @@ img {
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+
+
 
 /* Секция search */
 
