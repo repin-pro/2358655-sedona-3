@@ -219,6 +219,23 @@ img {
 .button-reset {
   background-color: transparent;
   color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:focus {
+  outline: 3px solid rgba(131, 179, 211, 1)
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  background: rgba(255, 255, 255, 1);
 }
 
 .button-small {
@@ -245,20 +262,75 @@ img {
   background-color: #756157;
   color: #FFFFFF;
   border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.button-basic:hover {
+  background-color: #615048;
+}
+
+.button-basic:focus {
+  background-color: #615048;
+}
+
+.button-basic:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-basic:disabled {
+  background-color: #E5E5E5;
 }
 
 .button-second {
   border-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  transition: all 0.3s ease;
   background-color: #82B3D3;
   color: #FFFFFF;
+}
+
+.button-second:hover {
+  background-color: #68A2CA;
+}
+
+.button-second:focus {
+  background-color: #68A2CA;
+}
+
+.button-second:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-second:disabled {
+  background-color: #E5E5E5;
 }
 
 .button-select {
   background-color: #7DB54F;
   color: #FFFFFF;
+  transition: all 0.3s ease;
 }
+
+.button-select:hover {
+  background-color: #6C9E42;
+}
+
+.button-select:focus {
+  background-color: #6C9E42;
+}
+
+.button-select:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-select:disabled {
+  background-color: #E5E5E5;
+}
+
 
 .button-like-normal {
   margin: 0;
@@ -350,11 +422,13 @@ img {
 }
 
 /* Стили для бейджа */
- .badge {
+.badge {
   position: absolute;
   /* Позиционируем относительно родителя (icon-favarity) */
-  top: -11px;      /* Смещение вверх, чтобы залезть на угол иконки */
-  right: -7px;    /* Смещение вправо */
+  top: -11px;
+  /* Смещение вверх, чтобы залезть на угол иконки */
+  right: -7px;
+  /* Смещение вправо */
 
   /* Остальные стили бейджа оставляем как были */
   display: flex;
@@ -476,9 +550,12 @@ img {
 .advantage-card-title::after {
   content: '';
   display: block;
-  width: 60px;          /* Длина полоски — подберите под макет */
-  height: 3px;          /* Толщина полоски */
-  background-color: #ffffff; /* Цвет полоски (на синем фоне лучше белый) */
+  width: 60px;
+  /* Длина полоски — подберите под макет */
+  height: 3px;
+  /* Толщина полоски */
+  background-color: #ffffff;
+  /* Цвет полоски (на синем фоне лучше белый) */
   margin: 0 auto;
   margin-top: 20px;
 
