@@ -526,14 +526,11 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 102px;
 }
 
-.text-block-wrapper {
-  padding: 103px 0 68px 0;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+.advantages-list-first {
+  padding-top: 70px;
 }
 
 .advantages-desciption-text {
@@ -543,9 +540,10 @@ img {
 .advantages-list {
   display: grid;
   grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 385px;
 }
 
-.card-block-wrap {
+.advantages-item-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -583,8 +581,6 @@ img {
   grid-column: span 2;
 }
 
-
-
 .advantages-images {
   width: 800px;
   min-height: 385px;
@@ -596,31 +592,43 @@ img {
 
 .advantages-item {
   display: flex;
-
 }
 
 .advantage-more-list {
-  min-width: 400px;
-  min-height: 385px;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
   background-color: rgba(131, 179, 211, 0.12);
+  padding-top: 115px;
+  padding-bottom: 115px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.advantage-more-list-title {
+  margin-bottom: 43px;
+}
+
+.advantage-more-list-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #000000;
+  position: absolute;
+  top: 83px;
+  left: 55px;
 }
 
 .advantage-more-text-blocks {
   max-width: 230px;
 }
 
-
-
 .advatages-text {
   padding: 0;
   margin: 0;
 }
-
 
 /* Секция ervices */
 
@@ -628,6 +636,11 @@ img {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 65px;
+}
+
+.services-list-first {
+  padding-top: 37px;
 }
 
 .services-list {
@@ -646,10 +659,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 400px;
-  min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
+  padding-top: 184px;
+  padding-bottom: 64px;
+  position: relative;
 }
 
 .services-item:nth-child(2n) {
@@ -676,8 +690,40 @@ img {
 
 .services-card-title {
   max-width: 230px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   text-transform: uppercase;
+}
+
+
+.services-card-title-icon-home::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/home.svg);
+  width: 75px;
+  height: 75px;
+  top: 80px;
+  background-repeat: no-repeat;
+}
+
+.services-card-title-icon-food::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/food.svg);
+  width: 75px;
+  height: 75px;
+  top: 80px;
+  background-repeat: no-repeat;
+}
+
+.services-card-title-icon-souvenirs::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/souvenirs.svg);
+  width: 75px;
+  height: 75px;
+  top: 80px;
+  left: 170px;
+  background-repeat: no-repeat;
 }
 
 
