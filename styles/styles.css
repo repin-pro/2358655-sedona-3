@@ -402,6 +402,22 @@ img {
 .navigation-item {
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
+}
+
+.navigation-item-active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 44px;
+  width: 100%;
+  /* Длина полоски — подберите под макет */
+  height: 2px;
+  /* Толщина полоски */
+  background-color: #756257;
+  /* Цвет полоски (на синем фоне лучше белый) */
+
+
 }
 
 .icon-search {
@@ -532,33 +548,35 @@ img {
 .card-block-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 102px;
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 102px;
+  position: relative;
 }
 
-.advantage-card-title {
-  margin: 0;
+.advantage-card-title,
+.advantage-more-list-title {
   max-width: 172px;
   text-transform: uppercase;
-
+  position: relative;
 }
 
 .advantage-card-title::after {
   content: '';
   display: block;
   width: 60px;
-  /* Длина полоски — подберите под макет */
   height: 3px;
-  /* Толщина полоски */
   background-color: #ffffff;
-  /* Цвет полоски (на синем фоне лучше белый) */
-  margin: 0 auto;
-  margin-top: 20px;
+  position: absolute;
+  top: 88px;
+  left: 55px;
+}
 
+
+.advantage-card-title {
+  margin-bottom: 61px;
 }
 
 .advantages-images {
