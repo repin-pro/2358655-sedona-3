@@ -78,6 +78,8 @@
 }
 
 .text-input {
+
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -737,7 +739,7 @@ img {
 /* Секция subscribe */
 .subscribe {
   width: 100%;
-  padding: 96px 0 104px 0;
+  padding: 96px 0 106px 0;
   background-image: url(../images/background-image-subscription.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -748,25 +750,26 @@ img {
   justify-content: center;
 }
 
-.subscribe-title {
-  margin-bottom: 20px;
-}
+
 
 .subscribe-description {
-  margin-bottom: 54px;
+  margin-bottom: 52px;
   max-width: 475px;
   text-align: center;
 }
 
 .subscribe-form {
   min-width: 684px;
+  height: 50px;
   display: flex;
 }
 
 .subscribe-input {
   width: 100%;
-  padding: 20px 14px;
+padding-left: 19px;
+padding-top: 1px;
   border: none;
+   outline: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -783,12 +786,13 @@ img {
 
 /* Секция footer */
 .page-footer {
+
   padding: 0 70px;
   display: grid;
   grid-template-columns: 142px 340px 115px;
-  gap: 236px;
+  gap: 232px;
   padding-bottom: 30px;
-  padding-top: 40px;
+  padding-top: 46px;
 }
 
 .footer-social-list {
@@ -848,7 +852,11 @@ img {
 .header-wrapper {
   position: relative;
   z-index: 1;
-  margin-top: -13px;
+  margin-top: -30px;
+}
+
+.inner-header-title {
+  margin-bottom: 3px;
 }
 
 .inner-header {
@@ -863,7 +871,7 @@ img {
 }
 
 .breadcrumb-item:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 29px;
 }
 
 .background-hotel {
@@ -878,15 +886,26 @@ img {
 .icon-breadcrumps {
   background-image: url(../images/icons/home-breadcrumps.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   width: 12px;
   height: 12px;
+
 }
 
-.icon-arrow-right {
+.breadcrumb-item {
+  position: relative;
+}
+
+.breadcrumb-item:not(:first-child)::after {
   background-image: url(../images/icons/breadcrumbs-arrow-right.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   width: 20px;
   height: 20px;
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 6px;
 }
 
 .price-inputs {
@@ -970,6 +989,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 95px;
+  padding-bottom: 93px;
 }
 
 .select-control1 {
@@ -1012,7 +1033,6 @@ img {
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
-
 }
 
 .card-image {
