@@ -346,6 +346,8 @@ img {
   justify-self: center;
 }
 
+/* анимации */
+
 .text-animation {
   transition: all 0.3s ease;
 }
@@ -360,6 +362,24 @@ img {
 
 .text-animation:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+
+.black-icon-animation {
+  fill: #000;
+  transition: all 0.3s ease;
+}
+
+.black-icon-animation:hover {
+  fill: #756157;
+}
+
+.black-icon-animation:focus {
+  fill: #756157;
+}
+
+.black-icon-animation:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Страница index.html */
@@ -434,25 +454,11 @@ img {
   /* Толщина полоски */
   background-color: #756257;
   /* Цвет полоски (на синем фоне лучше белый) */
-
-
 }
 
-.icon-search {
-  background-image: url(../images/icons/search.svg);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-
-}
-
-/* Контейнер пункта меню с сердцем должен быть относительным */
-.navigation-user-item.icon-favarity {
+.icon-favarity {
+  display: block;
   position: relative;
-  width: 20px;
-  height: 20px;
-  /* Убираем background-image отсюда, если он мешает,
-     но лучше оставить здесь, а бейдж наложить сверху */
 }
 
 /* Стили для бейджа */
@@ -470,7 +476,7 @@ img {
   justify-content: center;
   width: 20px;
   height: 20px;
-  background-color: #4CAF50;
+  background-color: #7DB54F;
   color: #ffffff;
   border-radius: 50%;
   font-size: 10px;
@@ -484,21 +490,6 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Убедимся, что ссылка не ломает верстку */
-.navigation-user-item.icon-favarity a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.icon-favarity {
-  background-image: url(../images/icons/heart.svg);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-
-}
 
 .navigation-list {
   display: flex;
@@ -838,23 +829,6 @@ img {
 
 .footer-contacts-address-phone:not(:last-child) {
   margin-bottom: 20px;
-}
-
-.logo-html-academy svg {
-  fill: #000;
-  transition: all 0.3s ease;
-}
-
-.logo-html-academy svg:hover {
-  fill: #756157;
-}
-
-.logo-html-academy svg:focus {
-  fill: #756157;
-}
-
-.logo-html-academy svg:active {
-  fill: rgba(117, 97, 87, 0.3);
 }
 
 .footer-logo-wrap {
