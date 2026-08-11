@@ -346,6 +346,22 @@ img {
   justify-self: center;
 }
 
+.text-animation {
+  transition: all 0.3s ease;
+}
+
+.text-animation:hover {
+  color: #756157;
+}
+
+.text-animation:focus {
+  color: #756157;
+}
+
+.text-animation:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 /* Страница index.html */
 /* Секция header */
 
@@ -495,7 +511,7 @@ img {
 .hero {
   position: relative;
   z-index: 1;
-  margin-top: -30px;
+  margin-top: -31px;
 }
 
 .hero-background-image {
@@ -509,7 +525,8 @@ img {
     url('../images/index-background.jpg') no-repeat center / cover;
   width: 100%;
 
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 84px;
 }
 
 .welcome-image:not(:last-child) {
@@ -766,10 +783,10 @@ img {
 
 .subscribe-input {
   width: 100%;
-padding-left: 19px;
-padding-top: 1px;
+  padding-left: 19px;
+  padding-top: 1px;
   border: none;
-   outline: none;
+  outline: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -823,11 +840,21 @@ padding-top: 1px;
   margin-bottom: 20px;
 }
 
-.logo-html-academy {
-  background-image: url(../images/logo-html-academy.svg);
-  background-repeat: no-repeat;
-  width: 114px;
-  height: 33px;
+.logo-html-academy svg {
+  fill: #000;
+  transition: all 0.3s ease;
+}
+
+.logo-html-academy svg:hover {
+  fill: #756157;
+}
+
+.logo-html-academy svg:focus {
+  fill: #756157;
+}
+
+.logo-html-academy svg:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .footer-logo-wrap {
