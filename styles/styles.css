@@ -182,10 +182,10 @@ img {
 }
 
 .section-title {
-  margin: 0;
+
   max-width: 620px;
   text-align: center;
-  margin-bottom: 1px;
+
   text-transform: uppercase;
 }
 
@@ -382,6 +382,23 @@ img {
   fill: rgba(117, 97, 87, 0.3);
 }
 
+.blue-icon-animation {
+  fill: #83B3D3;
+  transition: all 0.3s ease;
+}
+
+.blue-icon-animation:hover {
+  fill: #68A2CA;
+}
+
+.blue-icon-animation:focus {
+  fill: #68A2CA;
+}
+
+.blue-icon-animation:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 /* Страница index.html */
 /* Секция header */
 
@@ -536,7 +553,7 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 102px;
+  padding-top: 69px;
 }
 
 .advantages-list-first {
@@ -761,7 +778,7 @@ img {
 
 
 .subscribe-description {
-  margin-bottom: 52px;
+  margin-bottom: 58px;
   max-width: 475px;
   text-align: center;
 }
@@ -794,13 +811,18 @@ img {
 
 /* Секция footer */
 .page-footer {
-
-  padding: 0 70px;
   display: grid;
+  align-items: start;
   grid-template-columns: 142px 340px 115px;
   gap: 232px;
-  padding-bottom: 30px;
-  padding-top: 46px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 42px;
+  padding-bottom: 33px;
+}
+
+.logo-html-academy {
+  padding-top: 5px;
 }
 
 .footer-social-list {
@@ -813,18 +835,6 @@ img {
   width: 47px;
   height: 40px;
   background-repeat: no-repeat;
-}
-
-.social-vk {
-  background-image: url(../images/icons/social-vk.svg);
-}
-
-.social-telegram {
-  background-image: url(../images/icons/social-telegram.svg);
-}
-
-.social-youtube {
-  background-image: url(../images/icons/social-youtube.svg);
 }
 
 .footer-contacts-address-phone:not(:last-child) {
