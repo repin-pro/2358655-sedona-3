@@ -182,10 +182,8 @@ img {
 }
 
 .section-title {
-
   max-width: 620px;
   text-align: center;
-
   text-transform: uppercase;
 }
 
@@ -451,7 +449,7 @@ img {
 .logo-image {
   display: block;
   width: 138px;
-  height: 64px;
+  height: 73px;
 }
 
 .navigation-item {
@@ -519,7 +517,7 @@ img {
 .hero {
   position: relative;
   z-index: 1;
-  margin-top: -31px;
+  margin-top: -39px;
 }
 
 .hero-background-image {
@@ -592,8 +590,9 @@ img {
   content: '';
   display: block;
   width: 60px;
-  height: 3px;
-  background-color: #ffffff;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+;
   position: absolute;
   top: 88px;
   left: 55px;
@@ -641,8 +640,8 @@ img {
   content: '';
   display: block;
   width: 60px;
-  height: 3px;
-  background-color: #000000;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 83px;
   left: 55px;
@@ -756,8 +755,12 @@ img {
 
 
 /* Секция search */
+.search-title {
+  margin-bottom: 21px;
+}
 
 .search-description-text {
+  margin: 0;
   margin-bottom: 54px;
 }
 
@@ -782,6 +785,7 @@ img {
   max-width: 475px;
   text-align: center;
 }
+
 
 .subscribe-form {
   min-width: 684px;
