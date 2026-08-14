@@ -944,10 +944,22 @@ img {
   gap: 8px;
 }
 
-.infrastructure-input {
-
-  -webkit-appearance: none;
+.infrastructure {
+  display: flex;
 }
+
+.infrastructure-input {
+  width: 20px;
+  height: 19px;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
 
 /* отключаем стрелки в инпутах*/
 .filter-form-input {
@@ -979,6 +991,10 @@ img {
   gap: 70px;
 }
 
+.catalog-filter-item {
+  position: relative;
+}
+
 .catalog-filter-title {
   margin-bottom: 32px;
 }
@@ -986,7 +1002,7 @@ img {
 .catalog-filter-list {
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: 13px;
 }
 
 .filter-actions {
