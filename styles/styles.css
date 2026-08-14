@@ -111,7 +111,7 @@ html {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: fill;
   box-sizing: border-box;
 }
 
@@ -570,7 +570,6 @@ img {
 .advantages-list {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 385px;
 }
 
 .advantages-item-wrap {
@@ -631,7 +630,7 @@ img {
   flex-direction: column;
   background-color: rgba(131, 179, 211, 0.12);
   padding-top: 115px;
-  padding-bottom: 115px;
+  padding-bottom: 93px;
   padding-left: 80px;
   padding-right: 80px;
 }
