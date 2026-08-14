@@ -945,6 +945,11 @@ img {
   gap: 8px;
 }
 
+.infrastructure-input {
+
+  -webkit-appearance: none;
+}
+
 /* отключаем стрелки в инпутах*/
 .filter-form-input {
   -moz-appearance: textfield;
