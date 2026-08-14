@@ -597,12 +597,11 @@ img {
   width: 60px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
-;
   position: absolute;
-  top: 88px;
-  left: 55px;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 
 .advantage-card-title {
   margin-bottom: 61px;
@@ -648,8 +647,9 @@ img {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 83px;
-  left: 55px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .advantage-more-text-blocks {
