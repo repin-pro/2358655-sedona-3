@@ -398,8 +398,131 @@ img {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-/* Страница index.html */
-/* Секция header */
+.input-animation {
+  transition: all 0.3s ease;
+}
+
+.input-animation:hover {
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.input-animation:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.input-animation:active {
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.input-animation:disabled {
+  background-color: #E5E5E5;
+}
+
+.label-animation {
+  transition: all 0.3s ease;
+}
+
+.label-animation:hover {
+  color: rgb(255, 255, 255, 0.8);
+}
+
+.label-animation:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.label-animation:active {
+  color: rgb(255, 255, 255, 0.3);
+}
+
+.label-animation:disabled {
+  background-color: #E5E5E5;
+}
+
+.area-input-animation {
+  transition: all 0.3s ease;
+}
+
+.area-input-animation:hover {
+  background-color: #E5E5E5;
+}
+
+.area-input-animation:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.area-input-animation:active {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.area-input-animation:disabled {
+  background-color: #E5E5E5;
+}
+
+.range-animation:hover {
+  background-color: #e3e3e6;
+}
+
+.range-animation {
+  transition: all 0.3s ease;
+}
+
+.range-animation:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.range-animation:active {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.select-animation {
+  transition: all 0.3s ease;
+}
+
+.select-animation:hover {
+  border-color: #68A2CA;
+}
+
+.select-animation:focus {
+  border-color: #68A2CA;
+}
+
+.select-animation:disabled {
+  border-color: #0000004D;
+  color: #0000004D;
+}
+
+.sort-link {
+
+  outline: 2px solid #E5E5E5;
+}
+
+/* Hover: красим контур ссылки */
+.sort-link:hover {
+  outline: 2px solid #000;
+}
+
+/* Focus: красим контур ссылки (это сработает при Tab) */
+.sort-link:focus-visible {
+  outline: 2px solid #68A2CA;
+  outline-offset: 2px; /* Чуть отодвинем контур от текста/иконки */
+}
+
+/* Active: можно добавить для клика */
+.sort-link:active {
+  outline-color: #000;
+}
+
+/* Опционально: стиль для активной вкладки (sort-active) */
+/* .sort-list.sort-active .sort-link {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+} */
 
 .page-header {
   display: grid;
@@ -941,6 +1064,7 @@ img {
 
 .infrastructure {
   display: flex;
+  cursor: pointer;
 }
 
 .infrastructure-input {
@@ -952,7 +1076,7 @@ img {
   background-color: #FFFFFF;
   margin-right: 14px;
   border-radius: 4px;
-
+  flex-shrink: 0;
 }
 
 .infrastructure-input::after {
@@ -995,6 +1119,7 @@ img {
   background-color: #ffffff;
   border-radius: 50%;
   margin-right: 14px;
+  flex-shrink: 0;
 }
 
 .housing-input::after {
@@ -1014,22 +1139,38 @@ img {
   height: 10px;
 }
 
+.housing-input:disabled {
+  background: #ccc;
+  border-color: #ccc;
+}
+
+.housing-input:disabled::after {
+  filter: grayscale(100%);
+}
+
 .price-inputs {
   display: inline-block;
   align-items: center;
+  width: 288px;
+}
 
+.inputs-wrapper {
+  display: flex;
+}
+
+.input-wrapper:not(:last-child) {
+  margin-right: 2px;
 }
 
 .input-wrapper {
   position: relative;
   display: inline-block;
-  width: 141px;
-  /* Фиксируем ширину под цифры */
+  width: 100%;
 }
 
 .input-label {
   position: absolute;
-  right: 12px;
+  right: 19px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -1050,7 +1191,23 @@ img {
   box-sizing: border-box;
   z-index: 1;
   position: relative;
-  padding-left: 20px;
+  padding-left: 19px;
+  padding-right: 39px;
+  flex-shrink: 0;
+  background-position: center;
+
+}
+
+/* Для Chrome, Safari, Edge, Opera */
+.filter-form-input::-webkit-outer-spin-button,
+.filter-form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+.filter-form-input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .from-input {
@@ -1107,6 +1264,7 @@ img {
 .filter-actions {
   display: flex;
   flex-direction: column;
+  width: 191px;
 }
 
 .button-form-apply {
@@ -1130,7 +1288,53 @@ img {
   border: none;
 }
 
+.range {
+  margin-top: 36px;
+  width: 100%;
+  position: relative;
+  height: 20px;
+  display: flex;
+}
+
+.range-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  width: 72%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.range-min,
+.range-max {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+}
+
+.range-max {
+  left: 207px;
+}
+
 /* Секция search-result */
+
+.results-count {
+  text-transform: uppercase;
+  margin-left: 19px;
+  margin-top: 7px;
+}
+
 .search-result {
   padding-left: 50px;
   padding-right: 50px;
@@ -1141,7 +1345,7 @@ img {
 .search-result-wrap {
   display: grid;
   gap: 70px;
-  grid-template-columns: 500px 292px 160px;
+  grid-template-columns: 488px 292px 160px;
   margin-bottom: 40px;
 }
 
@@ -1153,27 +1357,69 @@ img {
   padding-bottom: 93px;
 }
 
-.select-control1 {
-  padding: 14px 100px 14px 20px;
+.select-control {
+  padding: 10px 36px 8px 14px;
   border: 2px solid #E5E5E5;
   max-height: 50px;
   background-color: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../images/icons/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  padding-right: 30px;
+  /* место под иконку */
+  cursor: pointer;
 }
+
+/* .sorts {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+} */
 
 .sorts {
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* Стили самого элемента списка (только геометрия) */
 .sort-list {
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 14px;
-  padding: 17px 16px;
   cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 8px; Отступы внутри li, чтобы ссылка не прилипала к краям */
 }
+
+.sort-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit; /* Наследует цвет текста, если нужно */
+  transition: outline 0.3s ease;
+
+  /* Убираем стандартный контур браузера, чтобы рисовать свой */
+  outline: none;
+}
+
+
+.sort-icon {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: block;
+}
+
+
 
 .listings-grid {
   display: grid;
@@ -1229,18 +1475,6 @@ img {
   grid-column: 2;
   /* правый (второй .card-description) */
   text-align: right;
-}
-
-.icon-tile-type {
-  background-image: url(../images/icons/tile-type.svg);
-}
-
-.icon-card-type {
-  background-image: url(../images/icons/card-type.svg);
-}
-
-.icon-table-type {
-  background-image: url(../images/icons/table-type.svg);
 }
 
 .star-wrapper {
