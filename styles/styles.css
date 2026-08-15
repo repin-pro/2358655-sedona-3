@@ -519,6 +519,18 @@ img {
   outline-offset: 2px;
 } */
 
+.breadcrumb-link:hover {
+  color: #FFFFFF99;
+}
+
+.breadcrumb-link:focus {
+  color: #fff;
+}
+
+.breadcrumb-link:active {
+  color: #FFFFFF4D;
+}
+
 .page-header {
   display: grid;
   gap: 30px;
@@ -877,7 +889,6 @@ img {
   left: 170px;
   background-repeat: no-repeat;
 }
-
 
 
 /* Секция search */
