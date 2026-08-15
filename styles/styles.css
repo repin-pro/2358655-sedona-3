@@ -497,11 +497,6 @@ img {
   color: #0000004D;
 }
 
-.sort-link {
-
-  outline: 2px solid #E5E5E5;
-}
-
 /* Hover: красим контур ссылки */
 .sort-link:hover {
   outline: 2px solid #000;
@@ -1406,9 +1401,7 @@ img {
   text-decoration: none;
   color: inherit; /* Наследует цвет текста, если нужно */
   transition: outline 0.3s ease;
-
-  /* Убираем стандартный контур браузера, чтобы рисовать свой */
-  outline: none;
+  outline: 2px solid #E5E5E5;
 }
 
 
