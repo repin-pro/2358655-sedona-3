@@ -939,56 +939,145 @@ img {
   top: 6px;
 }
 
-.price-inputs {
-  display: flex;
-  gap: 8px;
-}
-
 .infrastructure {
   display: flex;
 }
 
 .infrastructure-input {
-  width: 20px;
-  height: 19px;
-  background-color: #FFFFFF;
-  margin-right: 10px;
+  position: relative;
+  appearance: none;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  margin-right: 14px;
+  border-radius: 4px;
+
 }
 
+.infrastructure-input::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-image: url("..//images/icons/icon-chekbox.svg");
+  background-repeat: no-repeat;
+  transition: 500ms;
+  left: 5px;
+  top: 5px;
+}
 
+.infrastructure-input:checked::after {
+  width: 20px;
+  height: 20px;
 
+}
 
+.infrastructure-input:disabled {
+  background: #ccc;
+  border-color: #ccc;
+}
 
+.infrastructure-input:disabled::after {
+  filter: grayscale(100%);
+}
 
-/* отключаем стрелки в инпутах*/
-.filter-form-input {
-  -moz-appearance: textfield;
-  appearance: textfield;
-  /* для совместимости с другими браузерами */
+.housing {
+  display: flex;
+}
+
+.housing-input {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.housing-input::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  transition: 500ms;
+  left: 5px;
+  top: 5px;
+}
+
+.housing-input:checked:after {
+  width: 10px;
+  height: 10px;
+}
+
+.price-inputs {
+  display: inline-block;
+  align-items: center;
+
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 141px;
+  /* Фиксируем ширину под цифры */
+}
+
+.input-label {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+  white-space: nowrap;
+  color: #999;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .filter-form-input {
-  flex: 1 1 auto;
-  /* позволяет и сжиматься, и расти */
+  width: 100%;
   height: 48px;
-  width: 100px;
-  /* можно оставить как базовое значение */
-  padding-right: 20px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  color: #000;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
   padding-left: 20px;
+}
+
+.from-input {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
+
+.to-input {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 
 /* Секция filter */
 .catalog-filter {
   display: grid;
   padding-top: 35px;
   padding-bottom: 35px;
-  padding-left: 68px;
+  padding-left: 66px;
   padding-right: 68px;
-  grid-template-columns: 150px 150px 288px 191px;
-  gap: 70px;
+  grid-template-columns: 370px 549px;
+  gap: 145px;
+}
+
+.filter-group-wrap {
+  display: flex;
+  gap: 65px;
 }
 
 .catalog-filter-item {
@@ -1001,17 +1090,23 @@ img {
 
 .catalog-filter-list {
   padding: 0;
-  display: grid;
-  gap: 13px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+}
+
+.housing-filter-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
 }
 
 .filter-actions {
   display: flex;
   flex-direction: column;
-}
-
-.price-filter {
-  padding-left: 70px;
 }
 
 .button-form-apply {
@@ -1023,6 +1118,16 @@ img {
   grid-template-columns: 288px 191px;
   gap: 70px;
   width: 100%;
+}
+
+.filter-group {
+  display: flex;
+  gap: 70px;
+}
+
+.filter-form-input {
+  appearance: none;
+  border: none;
 }
 
 /* Секция search-result */
