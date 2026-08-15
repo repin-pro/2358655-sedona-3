@@ -179,6 +179,7 @@ img {
   background-color: #FFFFFF;
   min-height: 100vh;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .section-title {
@@ -499,25 +500,24 @@ img {
 
 /* Hover: красим контур ссылки */
 .sort-link:hover {
-  outline: 2px solid #000;
+  border: 2px solid #000;
 }
 
 /* Focus: красим контур ссылки (это сработает при Tab) */
 .sort-link:focus-visible {
-  outline: 2px solid #68A2CA;
-  outline-offset: 2px; /* Чуть отодвинем контур от текста/иконки */
+  border: 2px solid #68A2CA;
+
 }
 
 /* Active: можно добавить для клика */
 .sort-link:active {
-  outline-color: #000;
+  border: 2px solid #000;
 }
 
 /* Опционально: стиль для активной вкладки (sort-active) */
-/* .sort-list.sort-active .sort-link {
-  outline: 2px solid #000;
-  outline-offset: 2px;
-} */
+.sort-list.sort-active .sort-link {
+  border: 2px solid #000;
+}
 
 .breadcrumb-link:hover {
   color: #FFFFFF99;
@@ -1337,21 +1337,20 @@ img {
 
 .results-count {
   text-transform: uppercase;
-  margin-left: 19px;
-  margin-top: 7px;
+  align-self: center;
 }
 
 .search-result {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 60px;
-  padding-top: 50px;
+  padding-left: 69px;
+    padding-right: 69px;
+    padding-bottom: 60px;
+    padding-top: 50px;
 }
 
 .search-result-wrap {
   display: grid;
   gap: 70px;
-  grid-template-columns: 488px 292px 160px;
+  grid-template-columns: 472px 289px 160px;
   margin-bottom: 40px;
 }
 
@@ -1410,9 +1409,11 @@ img {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: inherit; /* Наследует цвет текста, если нужно */
+  color: inherit;
+  /* Наследует цвет текста, если нужно */
   transition: outline 0.3s ease;
-  outline: 2px solid #E5E5E5;
+  border: 3px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 
@@ -1435,10 +1436,10 @@ img {
 
 .card {
   display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-rows: 214px 28px 20px 37px 39px;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 20px;
+  gap: 16px 10px;
+  padding: 19px;
   border: 1px solid #E5E5E5;
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
