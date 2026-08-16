@@ -1435,33 +1435,49 @@ img {
 }
 
 .card {
-  display: grid;
-  grid-template-rows: 214px 28px 20px 37px 39px;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 10px;
-  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
   border: 1px solid #E5E5E5;
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
 }
 
-.card-image {
-  width: 100%;
+.card-description-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-.card-link,
-.card-title-link {
-  grid-column: 1 / -1;
+.buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  align-items: center;
+}
+
+.card-image {
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 .card-link {
   width: 100%;
 }
 
+.card-title-link {
+  margin-bottom: 15px;
+}
+
 .card-rating {
-  width: 100%;
-  height: 100%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px
 }
 
 .card-description {
