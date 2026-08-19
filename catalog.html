@@ -11,20 +11,20 @@
   <body>
     <div class="container">
 
-     <header class="page-header">
+      <header class="page-header">
         <a class="navigation-logo-link" href="index.html">
           <img class="logo-image" src="images/logo.svg" alt="Логотип города Седона" width="138" height="64">
         </a>
 
         <nav class="navigation">
           <ul class="navigation-list">
-            <li class="navigation-item navigation-item-active">
-              <a class="navigation-link title-4 text-animation" href="index.html">Главная</a>
+            <li class="navigation-item >
+              <a class=" navigation-link title-4 text-animation" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link title-4 text-animation" href="about.html">О Седоне</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-active">
               <a class="navigation-link title-4 text-animation" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
@@ -32,11 +32,12 @@
 
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
-            <a href="#" class="navigation-link"><span class="visually-hidden">Поиск</span>
+            <a href="#" class="navigation-link">
               <svg class="black-icon-animation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
                 <path
                   d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679zm-10-2.486c-3.3 0-6-2.685-6-5.967s2.7-5.967 6-5.967 6 2.685 6 5.967-2.7 5.967-6 5.967" />
               </svg>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-user-item">
@@ -61,9 +62,15 @@
           <div class="inner-header">
             <h1 class="inner-header-title title-1">Гостиницы Седоны</h1>
             <ul class="breadcrumb">
-              <li class="breadcrumb-item icon-breadcrumps">
+              <li class="breadcrumb-item ">
                 <a class="breadcrumb-link" href="/">
                   <span class="visually-hidden">Главная</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0L0 5.80006V12.0001H12V5.80006L6 0ZM11 11.0001H1V6.20005L6 1.4L11 6.20005V11.0001Z"
+                      fill="white" />
+                    <path d="M4 10.0001H5V7.50005H7V10.0001H8V6.50005H4V10.0001Z" fill="white" />
+                  </svg>
+
                 </a>
               </li>
               <li class="breadcrumb-item">
@@ -369,8 +376,8 @@
             никакого спама, честное бойскаутское!</p>
           <form action="/subscribe" method="POST" class="newsletter-form">
             <div class="subscribe-catalog-form-row">
-              <input class="newsletter-input area-input-animation text-input" type="email" name="email" placeholder="Ваш e-mail"
-                required>
+              <input class="newsletter-input area-input-animation text-input" type="email" name="email"
+                placeholder="Ваш e-mail" required>
               <button class="newsletter-button button button-second button-big" type="submit">Подписаться</button>
             </div>
           </form>

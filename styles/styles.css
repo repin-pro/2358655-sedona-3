@@ -556,16 +556,21 @@ img {
   border: 2px solid #000;
 }
 
-.breadcrumb-link:hover {
-  color: #FFFFFF99;
+/* .breadcrumb-link {
+  width: 12px;
+  height: 12px;
+} */
+
+.breadcrumb-item:hover {
+  color: hsla(0, 0%, 100%, 0.6)
 }
 
-.breadcrumb-link:focus {
-  color: #fff;
+.breadcrumb-item:focus {
+  color: #ffffff;
 }
 
-.breadcrumb-link:active {
-  color: #FFFFFF4D;
+.breadcrumb-item:active {
+  color: hsla(0, 0%, 100%, 0.3);
 }
 
 .page-header {
@@ -1065,7 +1070,9 @@ img {
 .breadcrumb {
   display: flex;
   align-items: center;
+  align-content: center;
 }
+
 
 .breadcrumb-item:not(:last-child) {
   margin-right: 29px;
@@ -1078,15 +1085,6 @@ img {
   width: 100%;
   min-height: 412px;
   background-color: #3C4E58;
-}
-
-.icon-breadcrumps {
-  background-image: url(../images/icons/home-breadcrumps.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 12px;
-  height: 12px;
-
 }
 
 .breadcrumb-item {
