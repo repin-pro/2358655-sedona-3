@@ -53,7 +53,7 @@
 }
 
 .text-blocks {
-  font-family: PT Sans;
+  font-family: "PT Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -321,8 +321,7 @@ img {
 }
 
 .button-favarite:active {
-  background-color: #7DB54F;
-  color: #FFFFFF4D;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-favarite:disabled {
@@ -370,7 +369,6 @@ img {
   background-color: #E5E5E5;
 }
 
-
 .button-like-normal {
   margin: 0;
   font-weight: 400;
@@ -381,10 +379,10 @@ img {
   background: #F2F2F2;
   align-self: center;
   justify-self: center;
+  cursor: auto;
 }
 
 /* анимации */
-
 .text-animation {
   transition: all 0.3s ease;
 }
@@ -401,6 +399,17 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.pagination-item:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-item:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.pagination-item:focus {
+  background-color: #68A2CA;
+}
 
 .black-icon-animation {
   fill: #000;
@@ -501,7 +510,7 @@ img {
 }
 
 .range-animation:hover {
-  background-color: #e3e3e6;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-animation {
@@ -531,8 +540,8 @@ img {
 }
 
 .select-animation:disabled {
-  border-color: #0000004D;
-  color: #0000004D;
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Hover: красим контур ссылки */
@@ -562,7 +571,7 @@ img {
 } */
 
 .breadcrumb-item:hover {
-  color: hsla(0, 0%, 100%, 0.6)
+  color: rgba(255, 255, 255, 1);
 }
 
 .breadcrumb-item:focus {
@@ -570,11 +579,11 @@ img {
 }
 
 .breadcrumb-item:active {
-  color: hsla(0, 0%, 100%, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .white-icon-animation:hover {
-  fill: hsla(0, 0%, 100%, 0.6)
+  fill: rgba(255, 255, 255, 1);
 }
 
 .white-icon-animation:focus {
@@ -582,7 +591,7 @@ img {
 }
 
 .white-icon-animation:active {
-  fill: hsla(0, 0%, 100%, 0.6)
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -591,7 +600,6 @@ img {
   gap: 30px;
   margin: 0 70px;
   grid-template-columns: 138px 561px 110px 160px;
-  /* Убираем внутренние паддинги у родителя, чтобы не было дублей */
   box-sizing: border-box;
   align-items: start;
   padding-bottom: 30px;
@@ -650,11 +658,8 @@ img {
   display: block;
   top: 44px;
   width: 100%;
-  /* Длина полоски — подберите под макет */
   height: 2px;
-  /* Толщина полоски */
   background-color: #756257;
-  /* Цвет полоски (на синем фоне лучше белый) */
 }
 
 .icon-favarity {
@@ -665,13 +670,8 @@ img {
 /* Стили для бейджа */
 .badge {
   position: absolute;
-  /* Позиционируем относительно родителя (icon-favarity) */
   top: -11px;
-  /* Смещение вверх, чтобы залезть на угол иконки */
   right: -7px;
-  /* Смещение вправо */
-
-  /* Остальные стили бейджа оставляем как были */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -683,11 +683,7 @@ img {
   font-size: 10px;
   font-weight: bold;
   line-height: 1;
-
-  /* Гарантируем, что бейдж будет поверх иконки сердца */
   z-index: 2;
-
-  /* Опционально: тень для объема */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -716,7 +712,6 @@ img {
     url('../images/divider.svg') no-repeat bottom / 100% auto,
     url('../images/index-background.jpg') no-repeat center / cover;
   width: 100%;
-
   padding-top: 50px;
   padding-bottom: 84px;
 }
@@ -846,7 +841,6 @@ img {
 }
 
 /* Секция ervices */
-
 .services {
   display: flex;
   align-items: center;
@@ -945,7 +939,6 @@ img {
   background-repeat: no-repeat;
 }
 
-
 /* Секция search */
 .search-title {
   margin-bottom: 21px;
@@ -978,12 +971,10 @@ img {
   margin-bottom: 22px;
 }
 
-
 .subscribe-description {
   max-width: 475px;
   text-align: center;
 }
-
 
 .subscribe-form {
   min-width: 684px;
@@ -1000,7 +991,6 @@ img {
   outline: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-
 }
 
 .subscribe-button {
@@ -1061,9 +1051,7 @@ img {
 }
 
 /* Страница catalog.html*/
-
 /* секция hero */
-
 .header-wrapper {
   position: relative;
   z-index: 1;
@@ -1090,6 +1078,7 @@ img {
   width: 15px;
   height: 15px;
   fill: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .breadcrumb-item:not(:last-child) {
@@ -1107,6 +1096,7 @@ img {
 
 .breadcrumb-item {
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .breadcrumb-item:not(:first-child)::after {
@@ -1157,8 +1147,8 @@ img {
 }
 
 .infrastructure-input:disabled {
-  background: #ccc;
-  border-color: #ccc;
+  background-color: #cccccc;
+  border-color: #cccccc;
 }
 
 .infrastructure-input:disabled::after {
@@ -1199,8 +1189,8 @@ img {
 }
 
 .housing-input:disabled {
-  background: #ccc;
-  border-color: #ccc;
+  background-color: #cccccc;
+  border-color: #cccccc;
 }
 
 .housing-input:disabled::after {
@@ -1235,7 +1225,7 @@ img {
   pointer-events: none;
   z-index: 2;
   white-space: nowrap;
-  color: #999;
+  color: #999999;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -1244,9 +1234,9 @@ img {
 .filter-form-input {
   width: 100%;
   height: 48px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
@@ -1373,7 +1363,7 @@ img {
 
 .range-min,
 .range-max {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 20px;
   height: 20px;
   border-radius: 5px;
@@ -1426,16 +1416,8 @@ img {
   background-repeat: no-repeat;
   background-position: right 18px center;
   padding-right: 30px;
-  /* место под иконку */
   cursor: pointer;
 }
-
-/* .sorts {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 8px;
-} */
 
 .sorts {
   display: flex;
@@ -1446,7 +1428,6 @@ img {
   margin: 0;
 }
 
-/* Стили самого элемента списка (только геометрия) */
 .sort-list {
   cursor: pointer;
   width: 48px;
@@ -1454,7 +1435,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 8px; Отступы внутри li, чтобы ссылка не прилипала к краям */
 }
 
 .sort-link {
@@ -1469,7 +1449,6 @@ img {
   border-radius: 4px;
 }
 
-
 .sort-icon {
   width: 100%;
   height: 100%;
@@ -1477,11 +1456,8 @@ img {
   display: block;
 }
 
-
-
 .listings-grid {
   display: grid;
-  /* Адаптивные колонки: минимум 300px, остальное делится поровну */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
@@ -1496,7 +1472,6 @@ img {
   padding-right: 19px;
   border: 1px solid #E5E5E5;
   height: 100%;
-  /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
   box-sizing: border-box;
 }
 
@@ -1542,18 +1517,15 @@ img {
 
 .card-description:nth-child(3) {
   grid-column: 1;
-  /* левый (это первый .card-description) */
   text-align: left;
 }
 
 .card-description:nth-child(4) {
   grid-column: 2;
-  /* правый (второй .card-description) */
   text-align: right;
 }
 
 .star-wrapper {
-
   height: 37px;
 }
 
@@ -1582,32 +1554,27 @@ img {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  /* Разрешает перенос на новую строку, если не влезают */
   gap: 8px;
-  /* Отступы между кнопками */
 }
 
 
 .pagination-item {
   display: block;
-  /* Сбрасываем любые лишние стили у li */
   flex: 0 0 auto;
-  /* Ключевое правило: не расти, не сжиматься, ширина по контенту */
+  transition: all 0.3s ease;
 }
 
 .pagination-link {
   margin: 0;
   display: block;
-  /* Ссылка занимает всю область li */
   min-width: 40px;
-  /* Минимальная ширина для удобства нажатия (UX) */
   text-align: center;
-  /* Центрируем цифру внутри кнопки */
   padding-bottom: 12px;
   padding-top: 12px;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 
 .pagination-item {
   background-color: #82B3D3;
@@ -1629,7 +1596,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-top: 96px;
   padding-bottom: 103px;
   padding-left: 328px;
