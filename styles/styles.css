@@ -573,6 +573,19 @@ img {
   color: hsla(0, 0%, 100%, 0.3);
 }
 
+.white-icon-animation:hover {
+   fill: hsla(0, 0%, 100%, 0.6)
+}
+
+.white-icon-animation:focus {
+   fill: #ffffff;
+}
+
+.white-icon-animation:active {
+   fill: hsla(0, 0%, 100%, 0.6)
+}
+
+
 .page-header {
   display: grid;
   gap: 30px;
@@ -1073,6 +1086,11 @@ img {
   align-content: center;
 }
 
+.breadcrumb-icon-home {
+  width: 15px;
+  height: 15px;
+  fill: #ffffff;
+}
 
 .breadcrumb-item:not(:last-child) {
   margin-right: 29px;
