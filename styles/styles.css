@@ -574,15 +574,15 @@ img {
 }
 
 .white-icon-animation:hover {
-   fill: hsla(0, 0%, 100%, 0.6)
+  fill: hsla(0, 0%, 100%, 0.6)
 }
 
 .white-icon-animation:focus {
-   fill: #ffffff;
+  fill: #ffffff;
 }
 
 .white-icon-animation:active {
-   fill: hsla(0, 0%, 100%, 0.6)
+  fill: hsla(0, 0%, 100%, 0.6)
 }
 
 
@@ -1491,9 +1491,9 @@ img {
   display: flex;
   flex-direction: column;
   padding-left: 19px;
-    padding-bottom: 20px;
-    padding-top: 19px;
-    padding-right: 19px;
+  padding-bottom: 20px;
+  padding-top: 19px;
+  padding-right: 19px;
   border: 1px solid #E5E5E5;
   height: 100%;
   /* Растягиваем карточку на всю высоту ячейки в .listings-grid */
@@ -1604,20 +1604,25 @@ img {
   text-align: center;
   /* Центрируем цифру внутри кнопки */
   padding-bottom: 12px;
-    padding-top: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-
+.pagination-item {
+  background-color: #82B3D3;
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .pagination-item:first-of-type {
   background-color: #F2F2F2;
-  border-radius: 4px;
+  color: #000000;
 }
 
-.pagination-current {
-  background: #F2F2F2;
+.pagination-item:nth-last-child(2) {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .subscribe-catalog {
@@ -1626,7 +1631,7 @@ img {
   align-items: center;
 
   padding-top: 96px;
-    padding-bottom: 103px;
+  padding-bottom: 103px;
   padding-left: 328px;
   padding-right: 328px;
 
