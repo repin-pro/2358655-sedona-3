@@ -122,17 +122,20 @@
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 100;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding-top: 157px;
+}
+
+.modal-container-active {
+  display: flex;
 }
 
 .modal-field {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   width: 717px;
-  height: 576px;
   border-radius: 30px;
   padding-top: 62px;
   padding-right: 70px;
@@ -1856,17 +1859,6 @@ img {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.adults-quantity-button:hover {
-  background-color: #e0e0e0;
-  color: #000;
-}
-
-.adults-quantity-button:disabled {
-  color: #aaa;
-  cursor: not-allowed;
-  background-color: transparent;
-}
-
 .adults-quantity-input {
   width: 40px;
   height: 32px;
@@ -1988,17 +1980,6 @@ img {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.children-quantity-button:hover {
-  background-color: #e0e0e0;
-  color: #000;
-}
-
-.children-quantity-button:disabled {
-  color: #aaa;
-  cursor: not-allowed;
-  background-color: transparent;
-}
-
 .children-quantity-input {
   width: 37px;
   height: 32px;
@@ -2027,4 +2008,27 @@ img {
   width: 100%;
   padding: 13px 0;
   border-radius: 10px;
+}
+
+.icon-quantity-button-minus path {
+  fill: #756157;
+  fill-opacity: 0.3;
+  transition: fill 0.2s;
+}
+
+.adults-quantity-button-minus:hover path {
+  fill: #000000;
+}
+
+.adults-quantity-button-minus:focus-visible path {
+  fill: #000000;
+}
+
+.adults-quantity-button:focus-visible {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.adults-quantity-button-minus:active path {
+  fill: #756157;
 }
