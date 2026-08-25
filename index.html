@@ -209,22 +209,24 @@
   <section class="modal-container modal-container-active">
     <div class="modal-field">
       <div class="modal-content">
-        <button type="button" class="modal-closed">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M16.8113 4.10362L15.519 2.81131L9.81128 8.519L4.10359 2.81131L2.81128 4.10362L8.51897 9.81131L2.81128 15.519L4.10359 16.8113L9.81128 11.1036L15.519 16.8113L16.8113 15.519L11.1036 9.81131L16.8113 4.10362Z"
-              fill="black" />
-          </svg>
+        <div class="modal-title-wrap">
+          <h2 class="modal-title title-2">Поиск гостиницы в Седоне</h2>
+          <button type="button" class="modal-closed" id="close-btn" aria-label="Закрыть модальное окно">
+            <span class="visually-hidden">Закрыть модальное окно</span>
+            <svg class="closed-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.8113 4.10362L15.519 2.81131L9.81128 8.519L4.10359 2.81131L2.81128 4.10362L8.51897 9.81131L2.81128 15.519L4.10359 16.8113L9.81128 11.1036L15.519 16.8113L16.8113 15.519L11.1036 9.81131L16.8113 4.10362Z" />
+            </svg>
+          </button>
+        </div>
 
-        </button>
-        <h2 class="modal-title title-2">Поиск гостиницы в Седоне</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="checkin-date-row">
             <label class="label-text checkin-date-label">Дата Заезда:</label>
             <div class="checkin-date-wrapper">
-              <input type="text" class="modal-input modal-input-text checkin-date-input area-input-animation" id="checkinDate"
-                value="27 апреля 2020" placeholder="Выберите дату" aria-label="Дата заезда" readonly>
+              <input type="text" class="modal-input modal-input-text checkin-date-input area-input-animation"
+                id="checkinDate" value="27 апреля 2020" placeholder="Выберите дату" aria-label="Дата заезда">
               <svg class="checkin-date-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.3">
@@ -268,8 +270,8 @@
           <div class="checkout-date-row">
             <label class="label-text checkout-date-label">Дата Выезда:</label>
             <div class="checkout-date-wrapper">
-              <input class="checkout-date-input modal-input modal-input-text area-input-animation" type="text" id="checkoutDate"
-                value="1 сентября 2023" placeholder="Выберите дату" aria-label="Дата выезда" readonly>
+              <input class="checkout-date-input modal-input modal-input-text area-input-animation" type="text"
+                id="checkoutDate" value="1 сентября 2023" placeholder="Выберите дату" aria-label="Дата выезда">
               <svg class="checkout-date-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.3">
@@ -315,17 +317,18 @@
               <div class="adults-quantity-controls">
                 <button class="adults-quantity-button adults-quantity-button-minus" type="button"
                   aria-label="Уменьшить количество взрослых">
-                  <svg class="icon-quantity-button-minus" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="icon-quantity-button-minus" width="14" height="2" viewBox="0 0 14 2"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z" />
                   </svg>
 
                 </button>
-                <input class="adults-quantity-input number-input-text" type="text" value="2" readonly
+                <input class="adults-quantity-input number-input-text input-number-animate" type="text" value="2"
                   aria-label="Количество взрослых">
                 <button type="button" class="adults-quantity-button adults-quantity-button-plus"
-                  aria-label="Увеличить количество взрослых"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3" />
+                  aria-label="Увеличить количество взрослых">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill-opacity="0.3" />
                   </svg>
                 </button>
               </div>
@@ -335,10 +338,6 @@
               <label class="label-text children-quantity-label">Дети:</label>
               <div class="tooltip-wrapper">
                 <span class="tooltip-icon" aria-label="Информация">i</span>
-                <svg class="tooltip-icon-arrow-up" width="19" height="9" viewBox="0 0 19 9" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.5 0L19 9H0L9.5 0Z" fill="#333333" />
-                </svg>
                 <span class="tooltip-content" role="tooltip">
                   Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
                   размещаются бесплатно.
@@ -348,10 +347,10 @@
                 <button type="button" class="children-quantity-button children-quantity-button-minus"
                   aria-label="Уменьшить количество детей">
                   <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3" />
+                    <path d="M0 0L0 2L14 2V0L0 0Z" fill-opacity="0.3" />
                   </svg>
                 </button>
-                <input type="text" class="children-quantity-input number-input-text" value="2" readonly
+                <input type="text" class="children-quantity-input number-input-text input-number-animate" value="2"
                   aria-label="Количество детей">
                 <button type="button" class="children-quantity-button children-quantity-button-plus"
                   aria-label="Увеличить количество детей">

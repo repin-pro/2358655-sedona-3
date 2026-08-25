@@ -125,7 +125,6 @@
   display: none;
   justify-content: center;
   align-items: center;
-  padding-top: 157px;
 }
 
 .modal-container-active {
@@ -158,8 +157,9 @@
   padding-bottom: 8px;
 }
 
-.modal-content {
-  position: relative;
+.modal-title-wrap {
+  display: flex;
+  flex-direction: row;
 }
 
 .modal-title {
@@ -168,15 +168,16 @@
 }
 
 .modal-closed {
-  position: absolute;
-  top: 1px;
-  right: -18px;
   border-radius: 50%;
   width: 52px;
   height: 52px;
   background-color: #F2F2F2;
   border: none;
   z-index: 50;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: translateX(150px);
+  /* вылет вправо на половину своей ширины */
 }
 
 body {
@@ -632,29 +633,23 @@ img {
 
 /* Hover: красим контур ссылки */
 .sort-link:hover {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 /* Focus: красим контур ссылки (это сработает при Tab) */
 .sort-link:focus-visible {
   border: 2px solid #68A2CA;
-
 }
 
 /* Active: можно добавить для клика */
 .sort-link:active {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 /* Опционально: стиль для активной вкладки (sort-active) */
 .sort-list.sort-active .sort-link {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
-
-/* .breadcrumb-link {
-  width: 12px;
-  height: 12px;
-} */
 
 .breadcrumb-item:hover {
   color: rgba(255, 255, 255, 1);
@@ -679,6 +674,55 @@ img {
 .white-icon-animation:active {
   fill: rgba(255, 255, 255, 0.3);
 }
+
+.input-number-animate {
+  transition: all 0.3s ease;
+}
+
+.input-number-animate:focus {
+  background-color: #ffffff;
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.input-number-animate:active {
+  background-color: #ffffff;
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.input-number-animate:disabled {
+  background-color: #E5E5E5;
+  outline: none;
+}
+
+.closed-icon {
+  fill: #000000;
+  transition: all 0.3s ease;
+}
+
+.closed-icon:active {
+  opacity: 0.3;
+}
+
+.modal-closed:hover {
+  background-color: #E5E5E5;
+}
+
+.modal-closed:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 1px;
+}
+
+.modal-closed:focus-visible {
+  outline: 3px solid #83B3D3;
+  outline-offset: 1px;
+}
+
+.modal-closed:active {
+  background-color: #E5E5E5;
+}
+
 
 
 .page-header {
@@ -1791,10 +1835,8 @@ img {
   min-width: 0;
 }
 
-.checkout-date-input {}
 
 .checkout-date-input:focus {
-  outline: none;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1872,10 +1914,6 @@ img {
   margin: 0 2px;
 }
 
-.adults-quantity-input:focus {
-  outline: none;
-}
-
 .children-quantity-row {
   display: flex;
   align-items: center;
@@ -1919,7 +1957,7 @@ img {
 .tooltip-content {
   width: 256px;
   box-sizing: border-box;
-  visibility: visible;
+  visibility: hidden;
   background-color: #1a1a1a;
   color: #ffffff;
   text-align: left;
@@ -1928,8 +1966,8 @@ img {
   top: 26px;
   left: -17px;
   transform: translateX(-50%);
-  opacity: 1;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 1s ease;
   z-index: 10;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   font-family: PT Sans;
@@ -1942,10 +1980,15 @@ img {
   padding-bottom: 24px;
 }
 
-.tooltip-icon-arrow-up {
+.tooltip-content::before {
   position: absolute;
-  top: 18px;
-  right: 8px;
+  content: "";
+  width: 19px;
+  height: 9px;
+  background-color: black;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  left: 118px;
+  top: -9px;
 }
 
 /* Показываем тултип при наведении на обертку */
@@ -1993,9 +2036,6 @@ img {
   margin: 0 2px;
 }
 
-.children-quantity-input:focus {
-  outline: none;
-}
 
 .select-people-wrap {
   display: flex;
@@ -2010,17 +2050,17 @@ img {
   border-radius: 10px;
 }
 
-.icon-quantity-button-minus path {
+.adults-quantity-button path {
   fill: #756157;
   fill-opacity: 0.3;
   transition: fill 0.2s;
 }
 
-.adults-quantity-button-minus:hover path {
+.adults-quantity-button:hover path {
   fill: #000000;
 }
 
-.adults-quantity-button-minus:focus-visible path {
+.adults-quantity-button:focus-visible path {
   fill: #000000;
 }
 
@@ -2029,6 +2069,30 @@ img {
   outline-offset: 2px;
 }
 
-.adults-quantity-button-minus:active path {
+.adults-quantity-button:active path {
+  fill: #756157;
+}
+
+
+.children-quantity-button path {
+  fill: #756157;
+  fill-opacity: 0.3;
+  transition: fill 0.2s;
+}
+
+.children-quantity-button:hover path {
+  fill: #000000;
+}
+
+.children-quantity-button:focus-visible path {
+  fill: #000000;
+}
+
+.children-quantity-button:focus-visible {
+  outline: 3px solid #83B3D3;
+  outline-offset: 2px;
+}
+
+.children-quantity-button:active path {
   fill: #756157;
 }
