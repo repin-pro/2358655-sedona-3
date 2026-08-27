@@ -424,6 +424,10 @@ img {
   background-color: #68A2CA;
 }
 
+.button-second:focus-visible {
+  background-color: #68A2CA;
+}
+
 .button-second:active {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
@@ -1951,6 +1955,7 @@ img {
   line-height: 1;
   position: absolute;
   right: 4px;
+  border: none;
 }
 
 /* Стили для всплывающей подсказки */
