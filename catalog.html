@@ -54,7 +54,6 @@
         <div class="header-button">
           <a class="button button-small button-basic" href="#">Хочу сюда!</a>
         </div>
-
       </header>
 
       <main class="main-catalog" data-test="main">
@@ -90,7 +89,6 @@
                         <input class="infrastructure-input input-animation" type="checkbox" name="infrastructure"
                           value="pool" checked>
                         Бассейн
-
                       </label>
                     </li>
                     <li class="catalog-filter-item">
@@ -98,7 +96,6 @@
                         <input class="infrastructure-input input-animation" type="checkbox" name="infrastructure"
                           value="parking" checked>
                         Парковка
-
                       </label>
                     </li>
                     <li class="catalog-filter-item">
@@ -108,7 +105,6 @@
                         Wi‑Fi
                       </label>
                     </li>
-
                   </ul>
                 </fieldset>
 
@@ -146,12 +142,12 @@
                     <div class="input-wrapper input-from-wrapper">
                       <span class="input-label">от</span>
                       <input class="filter-form-input from-input text-input area-input-animation" type="number"
-                        id="price-from" placeholder="0" data-default="0" value="0">
+                        id="price-from" placeholder="0" data-default="0" value="0" required>
                     </div>
                     <div class="input-wrapper input-to-wrapper">
                       <span class="input-label">до</span>
                       <input class="filter-form-input to-input text-input area-input-animation" type="number"
-                        id="price-to" placeholder="9000" data-default="9000" value="9000">
+                        id="price-to" placeholder="9000" data-default="9000" value="9000" required>
                     </div>
                   </div>
                   <div class="range">
@@ -356,7 +352,6 @@
               </li>
               <li class="pagination-item">
                 <a class="pagination-link button-big" href="#">...</a>
-
               </li>
               <li class="pagination-item">
                 <a class="pagination-link button-big" href="#">10</a>
@@ -369,10 +364,11 @@
           <h2 class="subscribe-title section-title title-2">Подпишитесь на рассылку</h2>
           <p class="subscribe-catalog-description-text description-text text-basic">Только полезная информация и
             никакого спама, честное бойскаутское!</p>
-          <form action="/subscribe" method="POST" class="newsletter-form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" class="newsletter-form">
             <div class="subscribe-catalog-form-row">
-              <input class="newsletter-input area-input-animation text-input" type="email" name="email"
-                placeholder="Ваш e-mail" required>
+              <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
+              <input class="newsletter-input area-input-animation text-input" type="email" id="newsletter-email"
+                name="email" placeholder="Ваш e-mail" required>
               <button class="newsletter-button button button-second button-big" type="submit">Подписаться</button>
             </div>
           </form>

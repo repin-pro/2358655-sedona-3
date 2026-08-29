@@ -148,8 +148,9 @@
             честное
             бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-input text-input area-input-animation" type="email" placeholder="Ваш e-mail"
-              required>
+            <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
+            <input class="subscribe-input text-input area-input-animation" type="email" id="subscribe-email"
+              name="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button button button-second button-big" type="submit">Подписаться</button>
           </form>
         </section>
@@ -200,9 +201,7 @@
             </svg>
           </a>
         </div>
-
       </footer>
-
     </div>
     <!-- Для активации модального окна нужно применить класс "modal-container-active" к секции с классом "modal-container" -->
     <section class="modal-container modal-container-active" data-test="modal">
@@ -225,7 +224,7 @@
               <label class="label-text checkin-date-label">Дата Заезда:</label>
               <div class="checkin-date-wrapper">
                 <input type="text" class="modal-input modal-input-text checkin-date-input area-input-animation"
-                  id="checkinDate" value="27 апреля 2020" placeholder="Выберите дату" aria-label="Дата заезда">
+                  id="checkinDate" value="27 апреля 2020" placeholder="Выберите дату" aria-label="Дата заезда" required>
                 <svg class="checkin-date-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
@@ -272,7 +271,7 @@
               <label class="label-text checkout-date-label">Дата Выезда:</label>
               <div class="checkout-date-wrapper">
                 <input class="checkout-date-input modal-input modal-input-text area-input-animation" type="text"
-                  id="checkoutDate" value="1 сентября 2023" placeholder="Выберите дату" aria-label="Дата выезда">
+                  id="checkoutDate" value="1 сентября 2023" placeholder="Выберите дату" aria-label="Дата выезда" required>
                 <svg class="checkout-date-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
